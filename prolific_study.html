@@ -27,7 +27,7 @@
     <script src="js/prolific_study.js"></script>
 
     <!-- stimulus file -->
-    <script src="js/prolific_study_allstims.js"></script>
+    <script src="js/study_data.js"></script>
   </head>
 
   <body onload="init()">
@@ -107,21 +107,21 @@
     <!-- first example slide -->
     <div class="slide" id="example1">
       <h3>
-        Example 1
+        Demo Example 1
       </h3>
       <p class="sentence" style="color:#FFC20A">
-        I sometimes watch this play...
+        Vincent spoke at the event with a series of wealthy investors interested in his campaign ideas for the election.
       </p>
       <p class="followup" style="color:#0C7BDC">
-        but it's a different one each time.
+        Vincent spoke with a series of wealthy investors interested in his campaign ideas for the election at the event.
       </p>
       <div class="instruction">
-        <i><strong>Generally speaking</strong>, how natural-sounding is the second phrase (the one in blue) as a continuation to the first phrase (the one in yellow)?</i>
+        <i><strong>Generally speaking</strong>, how much more natural-sounding is the Sentence A (the one in blue) compared to the second sentence (the one in yellow)?</i>
       </div>
       <table class="likertscale">
         <tr>
           <td>
-            sounds completely unnatural
+            Sentence A is considerably more natural
           </td>
           <td>
             <input type="radio" name="number" value="1">
@@ -145,7 +145,7 @@
             <input type="radio" name="number" value="7">
           </td>
           <td>
-            sounds completely natural  
+            Sentence B is considerably more natural 
           </td>
         </tr>
         <tr>
@@ -197,13 +197,13 @@
     <!-- second example slide -->
     <div class="slide" id="example2">
       <h3>
-        Example 2
+        Demo Example 2
       </h3>
       <p class="sentence" style="color:#FFC20A">
-        I didn't have a meeting with a saleswoman today...
+        I’m searching your interesting question about the the lecture topics from this morning up.
       </p>
       <p class="followup" style="color:#0C7BDC">
-        because she was busy with something else.
+        I’m searching up your interesting question about the the lecture topics from this morning.
       </p>
       <div class="instruction">
         <i><strong>Generally speaking</strong>, how natural-sounding is the second phrase (the one in blue) as a continuation to the first phrase (the one in yellow)?</i>
@@ -211,7 +211,7 @@
       <table class="likertscale">
         <tr>
           <td>
-            sounds completely unnatural
+            Sentence A is considerably more natural 
           </td>
           <td>
             <input type="radio" name="number" value="1">
@@ -235,7 +235,7 @@
             <input type="radio" name="number" value="7">
           </td>
           <td>
-            sounds completely natural
+            Sentence B is considerably more natural 
           </td>
         </tr>
         <tr>
@@ -290,8 +290,8 @@
       <br>
       <p id="instruct-text" class="left">
         Great! Now we can start the real experiment. You will now read roughly 20 sentences. 
-        Your task is to rate how natural each follow-up phrase is as a continuation to each starting phrase.
-        For each continuation, you have the option (if you'd like—it would help us, but isn't mandatory) to explain, in as few words as you'd like, why it sounds natural or unnatural.
+        Your task is to rate which sentence you believe sounds more natural, and how much more it is than the other.
+        For each task, you have the option (if you'd like—it would help us, but isn't mandatory) to explain, in as few words as you'd like, why you selected the option you did.
       </p>
       <div class="center">
         <button class="continueButton" onclick="_s.button()">Continue</button>
