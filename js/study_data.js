@@ -1,5 +1,4 @@
-{
-  data: [
+var allstims = [
     {
       id: 0,
       sentence_a: "Melissa met the man at the park.",
