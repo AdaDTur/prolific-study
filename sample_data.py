@@ -15,7 +15,7 @@ for var in vars:
     data = pd.read_json(f'cleaned_collective_data/{var}_collective_data_cleaned.json', lines=True)
     ids = np.random.choice(len(data), 250)
     sub = data[data['id'].isin(ids)]
-    sub_s = sub[['id', 'sentence', 'shifted']]
+    sub_s = sub[['id', 'sentence_a', 'shift_a', 'sentence_b', 'shift_b']]
     sub_s['var'] = var
     frames.append(sub_s)
 
