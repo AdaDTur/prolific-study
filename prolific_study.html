@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>
-      Scope Experiment
+      Constituent Movement Study
     </title><!--JS-->
     <!-- external general utilities -->
     <script src="shared/js/jquery-1.11.1.min.js"></script>
@@ -24,10 +24,10 @@
     <link href="css/local-style.css" rel="stylesheet" type="text/css">
 
     <!-- experiment file -->
-    <script src="js/c_and_c_experiment.js"></script>
+    <script src="js/prolific_study.js"></script>
 
     <!-- stimulus file -->
-    <script src="js/c_and_c_stimuli.js"></script>
+    <script src="js/prolific_study_allstims.js"></script>
   </head>
 
   <body onload="init()">
@@ -36,36 +36,33 @@
     <!-- initial slide -->
     <div class="slide" id="i0">
       <p class="left">
-        <strong>We're conducting an experiment to see whether language AI systems produce natural-sounding continuations to certain kinds of phrases and sentences.</strong>
-        In order to make such a judgment we need to first establish a baseline of what are and aren't natural-sounding continuations, using human assessments. 
-        This is where you, the experiment-taker, come in.
-        You will read some sentences, along with possible continuations. <strong>Your task is to give your opinion on how natural-sounding
-          each continuation is.</strong><br>
+        <strong>We are conducting a study to compare the preferences of language AI systems and humans for various constituent orderings and sentence formations.</strong>
+        In order to complete this experiment, we are collecting human preference data on how natural-sounding sentences are when organized in different ways.
+        <strong>Your job is to read each pair of sentences, and give a rating for which sounds more natural than the other, and by how much.</strong>
         <br>
-        The experiment should take under 10 minutes. Read and agree to the consent form below, and we'll begin with two examples.
+        The experiment should take under 10 minutes. Read and agree to the consent form below, and we'll begin with a short demonstration.
       </p>
       <br>
       <p class="center"> <strong>CONSENT FORM</strong></p>
       <p class="left" style="font-size:16px; color: darkslateblue;">
-        You are invited to participate in a research study looking at the cases of language that do and don't sound natural.<strong>
+        You are invited to participate in a research study looking at the preferences of humans for constituent movement.
           Please read this form carefully and ask any questions you may have before agreeing to take part in the study. 
         </strong> 
         <br>
         <br>
-        <strong>Investigators: </strong>Dr. Siva Reddy (Assistant Professor of Linguistics and Computer Science at McGill University) 
-        and Dr. Michael Wagner (Professor of Linguistics at  McGill University), 
-        and students and research assistants under the two professors.
+        <strong>Investigators: </strong>Dr. Siva Reddy (Assistant Professor of Linguistics and Computer Science at McGill University),
+        and students and research assistants under Dr. Reddy.
         <br>
         <br>
-        <strong>What this study is about: </strong>The purpose of this study is to investigate whether language AI systems are able to 
-        capture certain semantic structures present in natural language that humans are able to work with. 
-        This is investigated in terms of the types of continuations that language AI systems produce to certain types of phrases, 
-        and how these compare to human judgments of these continuations.
+        <strong>What this study is about: </strong>The purpose of this study is to investigate whether language AI systems show similar 
+        preferences to humans in constituent movement and orderings. 
+        This is investigated in terms of various attributes of sentence constituents, AI system preferences on such data,
+        and how these compare to human judgments.
         <br>
         <br>
-        <strong>What we will ask you to do: </strong>In this study you read sentences and continuations, and answer questions about them. 
+        <strong>What we will ask you to do: </strong>In this study you read pairs of sentences, and answer questions about them. 
         We will also ask to collect some general information about your age, gender, level of education, and language to be able to better interpret the data, 
-        <strong>but this part is wholly optional</strong>.
+        <strong>but this portion is optional</strong>.
         <br>
         <br>
         <strong>Risks and benefits: </strong>This experiment involves no known risks or discomfort to you beyond the risks of everyday life, nor is it expected to be of any direct benefit to you.
@@ -85,7 +82,7 @@
         However, data cannot be withdrawn after the information linking your Prolific ID to your data has been deleted. 
         <br>
         <br>
-        <strong>If you have any questions: </strong>You can contact Gaurav Kamath (email: gaurav.kamath@mail.mcgill.ca), graduate student under Dr. Siva Reddy, with any questions about this study. When communicating by email, 
+        <strong>If you have any questions: </strong>You can contact Ada Tur (email: ada.tur@mail.mcgill.ca), undergraduate student under Dr. Siva Reddy, with any questions about this study. When communicating by email, 
         please be aware that information provided in emails is not absolutely safe and may be intercepted. This experiment is being run under the McGill Research Ethics Board protocols #401-0409/#342-0118. 
         If you have any questions or concerns regarding your rights as a subject in this study, you may contact the Research Ethics Board Office at 514-398-6831 or access their website at: 
         <br>
