@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Scope Experiment
+    </title><!--JS-->
+    <!-- external general utilities -->
+    <script src="shared/js/jquery-1.11.1.min.js"></script>
+    <script src="shared/full-projects/jquery-ui/jquery-ui.min.js"></script>
+    <script src="shared/js/underscore-min.js"></script>
+    
+    <!-- experiment logic -->
+    <script src="shared/js/exp-V2.js"></script>
+    <script src="shared/js/stream-V2.js"></script>
+
+    <!-- utilities to submit data to proliferate -->
+    <script src="https://proliferate.alps.science/static/js/proliferate.js"></script>
+
+    <!-- general utilities -->
+    <script src="shared/js/browserCheck.js"></script>
+    <script src="shared/js/utils.js"></script>
+    <link href="shared/full-projects/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="shared/css/cocolab-style.css" rel="stylesheet" type="text/css">
+    <link href="css/local-style.css" rel="stylesheet" type="text/css">
+
+    <!-- experiment file -->
+    <script src="js/c_and_c_experiment.js"></script>
+
+    <!-- stimulus file -->
+    <script src="js/c_and_c_stimuli.js"></script>
+  </head>
+
+  <body onload="init()">
+    <noscript>This task requires JavaScript.</noscript>
+    
+    <!-- initial slide -->
+    <div class="slide" id="i0">
+      <p class="left">
+        <strong>We're conducting an experiment to see whether language AI systems produce natural-sounding continuations to certain kinds of phrases and sentences.</strong>
+        In order to make such a judgment we need to first establish a baseline of what are and aren't natural-sounding continuations, using human assessments. 
+        This is where you, the experiment-taker, come in.
+        You will read some sentences, along with possible continuations. <strong>Your task is to give your opinion on how natural-sounding
+          each continuation is.</strong><br>
+        <br>
+        The experiment should take under 10 minutes. Read and agree to the consent form below, and we'll begin with two examples.
+      </p>
+      <br>
+      <p class="center"> <strong>CONSENT FORM</strong></p>
+      <p class="left" style="font-size:16px; color: darkslateblue;">
+        You are invited to participate in a research study looking at the cases of language that do and don't sound natural.<strong>
+          Please read this form carefully and ask any questions you may have before agreeing to take part in the study. 
+        </strong> 
+        <br>
+        <br>
+        <strong>Investigators: </strong>Dr. Siva Reddy (Assistant Professor of Linguistics and Computer Science at McGill University) 
+        and Dr. Michael Wagner (Professor of Linguistics at  McGill University), 
+        and students and research assistants under the two professors.
+        <br>
+        <br>
+        <strong>What this study is about: </strong>The purpose of this study is to investigate whether language AI systems are able to 
+        capture certain semantic structures present in natural language that humans are able to work with. 
+        This is investigated in terms of the types of continuations that language AI systems produce to certain types of phrases, 
+        and how these compare to human judgments of these continuations.
+        <br>
+        <br>
+        <strong>What we will ask you to do: </strong>In this study you read sentences and continuations, and answer questions about them. 
+        We will also ask to collect some general information about your age, gender, level of education, and language to be able to better interpret the data, 
+        <strong>but this part is wholly optional</strong>.
+        <br>
+        <br>
+        <strong>Risks and benefits: </strong>This experiment involves no known risks or discomfort to you beyond the risks of everyday life, nor is it expected to be of any direct benefit to you.
+        <br>
+        <br>
+        <strong>Compensation: </strong>You will be compensated according to the amount specified on the Prolific page. 
+        <br>
+        <br>
+        <strong>Use of your data: </strong>The data collected in this study will be stored on a secure server and on a cloud-storage service (either Google Drive or Dropbox). 
+        Your Prolific ID will not be directly linked to your data but will be stored separately (we only store the session ID). We will delete the separately stored Prolific ID from our files within 1 year at the latest.
+        <br>
+        The data we collect may also be used to illustrate the results of the research results in an online interactive site. 
+        The anonymized data may also be published as part of an anonymous corpus distributed for further research. By consenting to releasing your data as a corpus, you will help ensure that your contribution will have a more lasting impact.
+        <br>
+        <br>
+        <strong>Taking part is voluntary: </strong>Your participation is completely voluntary. You are free to withdraw consent and discontinue participation in the project at any time without penalty. 
+        However, data cannot be withdrawn after the information linking your Prolific ID to your data has been deleted. 
+        <br>
+        <br>
+        <strong>If you have any questions: </strong>You can contact Gaurav Kamath (email: gaurav.kamath@mail.mcgill.ca), graduate student under Dr. Siva Reddy, with any questions about this study. When communicating by email, 
+        please be aware that information provided in emails is not absolutely safe and may be intercepted. This experiment is being run under the McGill Research Ethics Board protocols #401-0409/#342-0118. 
+        If you have any questions or concerns regarding your rights as a subject in this study, you may contact the Research Ethics Board Office at 514-398-6831 or access their website at: 
+        <br>
+        https://www.mcgill.ca/research/researchers/compliance/human/reb-i-ii-iii
+        <br>
+        <br>
+        <strong>STATEMENT OF CONSENT: </strong><i>To give  your consent, please read the statement below, and click on it. If you do not consent, then you can just close the browser window now, your data will not be kept no file. 
+        Please print this page if you want to keep a record of this information!</i>
+      </p>
+
+      
+      <div class="center">
+        <button class="continueButton" onclick="_s.button()">
+          I consent to take part in the study. I agree to the anonymous use of the data in research presentations, publications, and online interactive sites to illustrate the findings. I agree that the collected data could be used in related follow-up studies. 
+          I agree to the use of the data in a not-for-profit anonymous corpus for research purposes which others will have access to.
+        </button>
+      </div>
+
+      <br>
+    </div>
+
+    <!-- first example slide -->
+    <div class="slide" id="example1">
+      <h3>
+        Example 1
+      </h3>
+      <p class="sentence" style="color:#FFC20A">
+        I sometimes watch this play...
+      </p>
+      <p class="followup" style="color:#0C7BDC">
+        but it's a different one each time.
+      </p>
+      <div class="instruction">
+        <i><strong>Generally speaking</strong>, how natural-sounding is the second phrase (the one in blue) as a continuation to the first phrase (the one in yellow)?</i>
+      </div>
+      <table class="likertscale">
+        <tr>
+          <td>
+            sounds completely unnatural
+          </td>
+          <td>
+            <input type="radio" name="number" value="1">
+          </td>
+          <td>
+            <input type="radio" name="number" value="2">
+          </td>
+          <td>
+            <input type="radio" name="number" value="3">
+          </td>
+          <td>
+            <input type="radio" name="number" value="4">
+          </td>
+          <td>
+            <input type="radio" name="number" value="5">
+          </td>
+          <td>
+            <input type="radio" name="number" value="6">
+          </td>
+          <td>
+            <input type="radio" name="number" value="7">
+          </td>
+          <td>
+            sounds completely natural  
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            1
+          </td>
+          <td>
+            2
+          </td>
+          <td>
+            3
+          </td>
+          <td>
+            4
+          </td>
+          <td>
+            5
+          </td>
+          <td>
+            6
+          </td>
+          <td>
+            7
+          </td>
+          <td></td>
+        </tr>
+      </table><br>
+      <br>
+      
+      <div class="center">
+        <button class="continueButton" onclick="_s.button()">Continue</button>
+      </div>
+      <div class="norating_err">
+        <p>
+          Make sure to select a rating before clicking 'Continue'! 
+        </p>
+      </div>
+      <div class="badrating_err">
+        <p>
+          In your rating, consider whether <b>'but it's a different one each time'</b> is 
+          a natural continuation to <b>'I sometimes watch this play...'</b>. Here, it would seem 
+          odd to follow up a mention of one specific play with reference to 'different ones each time'. 
+          Try giving this continuation another rating.
+        </p>
+      </div>
+    </div>
+
+    <!-- second example slide -->
+    <div class="slide" id="example2">
+      <h3>
+        Example 2
+      </h3>
+      <p class="sentence" style="color:#FFC20A">
+        I didn't have a meeting with a saleswoman today...
+      </p>
+      <p class="followup" style="color:#0C7BDC">
+        because she was busy with something else.
+      </p>
+      <div class="instruction">
+        <i><strong>Generally speaking</strong>, how natural-sounding is the second phrase (the one in blue) as a continuation to the first phrase (the one in yellow)?</i>
+      </div>
+      <table class="likertscale">
+        <tr>
+          <td>
+            sounds completely unnatural
+          </td>
+          <td>
+            <input type="radio" name="number" value="1">
+          </td>
+          <td>
+            <input type="radio" name="number" value="2">
+          </td>
+          <td>
+            <input type="radio" name="number" value="3">
+          </td>
+          <td>
+            <input type="radio" name="number" value="4">
+          </td>
+          <td>
+            <input type="radio" name="number" value="5">
+          </td>
+          <td>
+            <input type="radio" name="number" value="6">
+          </td>
+          <td>
+            <input type="radio" name="number" value="7">
+          </td>
+          <td>
+            sounds completely natural
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            1
+          </td>
+          <td>
+            2
+          </td>
+          <td>
+            3
+          </td>
+          <td>
+            4
+          </td>
+          <td>
+            5
+          </td>
+          <td>
+            6
+          </td>
+          <td>
+            7
+          </td>
+          <td></td>
+        </tr>
+      </table><br>
+      <br>
+      <div class="center">
+        <button class="continueButton" onclick="_s.button()">Continue</button>
+      </div>
+      <div class="norating_err">
+        <p>
+          Make sure to select a rating before clicking 'Continue'! 
+        </p>
+      </div>
+      <br>
+      <div class="badrating_err">
+        <p>
+          In your rating, consider whether <b>'because she was busy with something else'</b> is 
+          a natural continuation to <b>'I didn't have a meeting with a saleswoman today...'</b>. Here, the speaker
+          could have a specific saleswoman in mind when uttering the original phrase, which would make 
+          the continuation sound fairly natural. Try giving this continuation another rating.
+        </p>
+      </div>
+    </div>
+
+    <!-- main instructions slide -->
+    <div class="slide" id="startExp">
+      <br>
+      <br>
+      <p id="instruct-text" class="left">
+        Great! Now we can start the real experiment. You will now read roughly 20 sentences. 
+        Your task is to rate how natural each follow-up phrase is as a continuation to each starting phrase.
+        For each continuation, you have the option (if you'd like—it would help us, but isn't mandatory) to explain, in as few words as you'd like, why it sounds natural or unnatural.
+      </p>
+      <div class="center">
+        <button class="continueButton" onclick="_s.button()">Continue</button>
+      </div>
+    </div>
+
+    <!-- trial 1 slide -->
+    <div class="slide" id="trial1">
+
+      <!-- placeholders for contexts -->
+      <!-- <p class="case" style="text-align: left;"></p> -->
+      
+      <!-- placeholders for stimuli -->
+      <p class="Sen" id="trial-Sentence1" style="color:#FFC20A">
+        {{sentence}}
+      </p>
+      <p class="Fol" id="trial-Followup1" style="color:#0C7BDC">
+        {{followup}}
+      </p>
+      <div class="instruction">
+        <i><strong>Generally speaking</strong>, how natural does the second phrase (the one in blue) sound as a continuation to the first phrase (the one in yellow)?</i>
+      </div>
+      <table class="likertscale">
+        <tr>
+          <td>
+            sounds completely unnatural
+          </td>
+          <td>
+            <input type="radio" name="number" value="1">
+          </td>
+          <td>
+            <input type="radio" name="number" value="2">
+          </td>
+          <td>
+            <input type="radio" name="number" value="3">
+          </td>
+          <td>
+            <input type="radio" name="number" value="4">
+          </td>
+          <td>
+            <input type="radio" name="number" value="5">
+          </td>
+          <td>
+            <input type="radio" name="number" value="6">
+          </td>
+          <td>
+            <input type="radio" name="number" value="7">
+          </td>
+          <td>
+            sounds completely natural
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            1
+          </td>
+          <td>
+            2
+          </td>
+          <td>
+            3
+          </td>
+          <td>
+            4
+          </td>
+          <td>
+            5
+          </td>
+          <td>
+            6
+          </td>
+          <td>
+            7
+          </td>
+          <td></td>
+        </tr>
+      </table><br>
+      
+      <p>
+        (Optional) Why do you think the continuation was natural or unnatural?
+      </p>
+      <textarea id="trial_comments" rows="3" cols="50"></textarea><br>
+      <div class="comment_err">
+        <br>
+        <p>
+          Be sure to explain (in as few words as you'd like) why you found the continuation natural or unnatural!
+        </p>
+      </div>
+      <div class="center"> 
+        <button class="continueButton" onclick="_s.button()">Continue</button>
+      </div>
+      <div class="err">
+        <br>
+        <p>
+          Make sure to select a rating before clicking 'Continue'!
+        </p>
+      </div>
+    </div>
+
+    <!-- attention slide -->
+    <div class="slide" id="attention1">
+
+      <!-- placeholders for contexts -->
+      <!-- <p class="case" style="text-align: left;"></p> -->
+      
+      <!-- placeholders for stimuli -->
+      <p class="Sen" id="attention1_sentence" style="color:#FFC20A">
+        I didn't see a cat...
+      </p>
+      <p class="Fol" id="attention1_followup" style="color:#0C7BDC">
+        but these cars are eating my spinach. 
+      </p>
+      <div class="instruction">
+        <i><strong>Generally speaking</strong>, how natural does the second phrase (the one in blue) sound as a continuation to the first phrase (the one in yellow)?</i>
+      </div>
+      <table class="likertscale">
+        <tr>
+          <td>
+            sounds completely unnatural
+          </td>
+          <td>
+            <input type="radio" name="number" value="1">
+          </td>
+          <td>
+            <input type="radio" name="number" value="2">
+          </td>
+          <td>
+            <input type="radio" name="number" value="3">
+          </td>
+          <td>
+            <input type="radio" name="number" value="4">
+          </td>
+          <td>
+            <input type="radio" name="number" value="5">
+          </td>
+          <td>
+            <input type="radio" name="number" value="6">
+          </td>
+          <td>
+            <input type="radio" name="number" value="7">
+          </td>
+          <td>
+            sounds completely natural
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            1
+          </td>
+          <td>
+            2
+          </td>
+          <td>
+            3
+          </td>
+          <td>
+            4
+          </td>
+          <td>
+            5
+          </td>
+          <td>
+            6
+          </td>
+          <td>
+            7
+          </td>
+          <td></td>
+        </tr>
+      </table><br>
+      
+      <p>
+        (Optional) Why do you think the continuation was natural or unnatural?
+      </p>
+      <textarea id="trial_comments" rows="3" cols="50"></textarea><br>
+      <div class="comment_err">
+        <br>
+        <p>
+          Be sure to explain (in as few words as you'd like) why you found the continuation natural or unnatural!
+        </p>
+      </div>
+      <div class="center"> 
+        <button class="continueButton" onclick="_s.button()">Continue</button>
+      </div>
+      <div class="err">
+        <br>
+        <p>
+          Make sure to select a rating before clicking 'Continue'!
+        </p>
+      </div>
+    </div>
+
+
+    <!-- trial 2 slide -->
+    <div class="slide" id="trial2">
+
+      <!-- placeholders for contexts -->
+      <!-- <p class="case" style="text-align: left;"></p> -->
+      
+      <!-- placeholders for stimuli -->
+      <p class="Sen" id="trial-Sentence2" style="color:#FFC20A">
+        {{sentence}}
+      </p>
+      <p class="Fol" id="trial-Followup2" style="color:#0C7BDC">
+        {{followup}}
+      </p>
+      <div class="instruction">
+        <i><strong>Generally speaking</strong>, how natural does the second phrase (the one in blue) sound as a continuation to the first phrase (the one in yellow)?</i>
+      </div>
+      <table class="likertscale">
+        <tr>
+          <td>
+            sounds completely unnatural
+          </td>
+          <td>
+            <input type="radio" name="number" value="1">
+          </td>
+          <td>
+            <input type="radio" name="number" value="2">
+          </td>
+          <td>
+            <input type="radio" name="number" value="3">
+          </td>
+          <td>
+            <input type="radio" name="number" value="4">
+          </td>
+          <td>
+            <input type="radio" name="number" value="5">
+          </td>
+          <td>
+            <input type="radio" name="number" value="6">
+          </td>
+          <td>
+            <input type="radio" name="number" value="7">
+          </td>
+          <td>
+            sounds completely natural
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            1
+          </td>
+          <td>
+            2
+          </td>
+          <td>
+            3
+          </td>
+          <td>
+            4
+          </td>
+          <td>
+            5
+          </td>
+          <td>
+            6
+          </td>
+          <td>
+            7
+          </td>
+          <td></td>
+        </tr>
+      </table><br>
+      
+      <p>
+        (Optional) Why do you think the continuation was natural or unnatural?
+      </p>
+      <textarea id="trial_comments" rows="3" cols="50"></textarea><br>
+      <div class="comment_err">
+        <br>
+        <p>
+          Be sure to explain (in as few words as you'd like) why you found the continuation natural or unnatural!
+        </p>
+      </div>
+      <div class="center"> 
+        <button class="continueButton" onclick="_s.button()">Continue</button>
+      </div>
+      <div class="err">
+        <br>
+        <p>
+          Make sure to select a rating before clicking 'Continue'!
+        </p>
+      </div>
+    </div>
+
+    <!-- attention slide -->
+    <div class="slide" id="attention2">
+
+      <!-- placeholders for contexts -->
+      <!-- <p class="case" style="text-align: left;"></p> -->
+      
+      <!-- placeholders for stimuli -->
+      <p class="Sen" id="attention2_sentence" style="color:#FFC20A">
+        I often play basketball with my cousin...
+      </p>
+      <p class="Fol" id="attention2_followup" style="color:#0C7BDC">
+        because we both like the sport.
+      </p>
+      <div class="instruction">
+        <i><strong>Generally speaking</strong>, how natural does the second phrase (the one in blue) sound as a continuation to the first phrase (the one in yellow)?</i>
+      </div>
+      <table class="likertscale">
+        <tr>
+          <td>
+            sounds completely unnatural
+          </td>
+          <td>
+            <input type="radio" name="number" value="1">
+          </td>
+          <td>
+            <input type="radio" name="number" value="2">
+          </td>
+          <td>
+            <input type="radio" name="number" value="3">
+          </td>
+          <td>
+            <input type="radio" name="number" value="4">
+          </td>
+          <td>
+            <input type="radio" name="number" value="5">
+          </td>
+          <td>
+            <input type="radio" name="number" value="6">
+          </td>
+          <td>
+            <input type="radio" name="number" value="7">
+          </td>
+          <td>
+            sounds completely natural
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            1
+          </td>
+          <td>
+            2
+          </td>
+          <td>
+            3
+          </td>
+          <td>
+            4
+          </td>
+          <td>
+            5
+          </td>
+          <td>
+            6
+          </td>
+          <td>
+            7
+          </td>
+          <td></td>
+        </tr>
+      </table><br>
+      
+      <p>
+        (Optional) Why do you think the continuation was natural or unnatural?
+      </p>
+      <textarea id="trial_comments" rows="3" cols="50"></textarea><br>
+      <div class="comment_err">
+        <br>
+        <p>
+          Be sure to explain (in as few words as you'd like) why you found the continuation natural or unnatural!
+        </p>
+      </div>
+      <div class="center"> 
+        <button class="continueButton" onclick="_s.button()">Continue</button>
+      </div>
+      <div class="err">
+        <br>
+        <p>
+          Make sure to select a rating before clicking 'Continue'!
+        </p>
+      </div>
+    </div>
+
+    <!-- trial 3 slide -->
+    <div class="slide" id="trial3">
+
+      <!-- placeholders for contexts -->
+      <!-- <p class="case" style="text-align: left;"></p> -->
+      
+      <!-- placeholders for stimuli -->
+      <p class="Sen" id="trial-Sentence3" style="color:#FFC20A">
+        {{sentence}}
+      </p>
+      <p class="Fol" id="trial-Followup3" style="color:#0C7BDC">
+        {{followup}}
+      </p>
+      <div class="instruction">
+        <i><strong>Generally speaking</strong>, how natural does the second phrase (the one in blue) sound as a continuation to the first phrase (the one in yellow)?</i>
+      </div>
+      <table class="likertscale">
+        <tr>
+          <td>
+            sounds completely unnatural
+          </td>
+          <td>
+            <input type="radio" name="number" value="1">
+          </td>
+          <td>
+            <input type="radio" name="number" value="2">
+          </td>
+          <td>
+            <input type="radio" name="number" value="3">
+          </td>
+          <td>
+            <input type="radio" name="number" value="4">
+          </td>
+          <td>
+            <input type="radio" name="number" value="5">
+          </td>
+          <td>
+            <input type="radio" name="number" value="6">
+          </td>
+          <td>
+            <input type="radio" name="number" value="7">
+          </td>
+          <td>
+            sounds completely natural
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            1
+          </td>
+          <td>
+            2
+          </td>
+          <td>
+            3
+          </td>
+          <td>
+            4
+          </td>
+          <td>
+            5
+          </td>
+          <td>
+            6
+          </td>
+          <td>
+            7
+          </td>
+          <td></td>
+        </tr>
+      </table><br>
+      
+      <p>
+        (Optional) Why do you think the continuation was natural or unnatural?
+      </p>
+      <textarea id="trial_comments" rows="3" cols="50"></textarea><br>
+      <div class="comment_err">
+        <br>
+        <p>
+          Be sure to explain (in as few words as you'd like) why you found the continuation natural or unnatural!
+        </p>
+      </div>
+      <div class="center"> 
+        <button class="continueButton" onclick="_s.button()">Continue</button>
+      </div>
+      <div class="err">
+        <br>
+        <p>
+          Make sure to select a rating before clicking 'Continue'!
+        </p>
+      </div>
+    </div>
+
+    <!-- attention slide -->
+    <div class="slide" id="attention3">
+
+      <!-- placeholders for contexts -->
+      <!-- <p class="case" style="text-align: left;"></p> -->
+      
+      <!-- placeholders for stimuli -->
+      <p class="Sen" id="attention3_sentence" style="color:#FFC20A">
+        Some cats like to jump around...
+      </p>
+      <p class="Fol" id="attention3_followup" style="color:#0C7BDC">
+        green dreams wake crocodiles.
+      </p>
+      <div class="instruction">
+        <i><strong>Generally speaking</strong>, how natural does the second phrase (the one in blue) sound as a continuation to the first phrase (the one in yellow)?</i>
+      </div>
+      <table class="likertscale">
+        <tr>
+          <td>
+            sounds completely unnatural
+          </td>
+          <td>
+            <input type="radio" name="number" value="1">
+          </td>
+          <td>
+            <input type="radio" name="number" value="2">
+          </td>
+          <td>
+            <input type="radio" name="number" value="3">
+          </td>
+          <td>
+            <input type="radio" name="number" value="4">
+          </td>
+          <td>
+            <input type="radio" name="number" value="5">
+          </td>
+          <td>
+            <input type="radio" name="number" value="6">
+          </td>
+          <td>
+            <input type="radio" name="number" value="7">
+          </td>
+          <td>
+            sounds completely natural
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            1
+          </td>
+          <td>
+            2
+          </td>
+          <td>
+            3
+          </td>
+          <td>
+            4
+          </td>
+          <td>
+            5
+          </td>
+          <td>
+            6
+          </td>
+          <td>
+            7
+          </td>
+          <td></td>
+        </tr>
+      </table><br>
+      
+      <p>
+        (Optional) Why do you think the continuation was natural or unnatural?
+      </p>
+      <textarea id="trial_comments" rows="3" cols="50"></textarea><br>
+      <div class="comment_err">
+        <br>
+        <p>
+          Be sure to explain (in as few words as you'd like) why you found the continuation natural or unnatural!
+        </p>
+      </div>
+      <div class="center"> 
+        <button class="continueButton" onclick="_s.button()">Continue</button>
+      </div>
+      <div class="err">
+        <br>
+        <p>
+          Make sure to select a rating before clicking 'Continue'!
+        </p>
+      </div>
+    </div>
+
+
+    <!-- trial 4 slide -->
+    <div class="slide" id="trial4">
+
+      <!-- placeholders for contexts -->
+      <!-- <p class="case" style="text-align: left;"></p> -->
+      
+      <!-- placeholders for stimuli -->
+      <p class="Sen" id="trial-Sentence4" style="color:#FFC20A">
+        {{sentence}}
+      </p>
+      <p class="Fol" id="trial-Followup4" style="color:#0C7BDC">
+        {{followup}}
+      </p>
+      <div class="instruction">
+        <i><strong>Generally speaking</strong>, how natural does the second phrase (the one in blue) sound as a continuation to the first phrase (the one in yellow)?</i>
+      </div>
+      <table class="likertscale">
+        <tr>
+          <td>
+            sounds completely unnatural
+          </td>
+          <td>
+            <input type="radio" name="number" value="1">
+          </td>
+          <td>
+            <input type="radio" name="number" value="2">
+          </td>
+          <td>
+            <input type="radio" name="number" value="3">
+          </td>
+          <td>
+            <input type="radio" name="number" value="4">
+          </td>
+          <td>
+            <input type="radio" name="number" value="5">
+          </td>
+          <td>
+            <input type="radio" name="number" value="6">
+          </td>
+          <td>
+            <input type="radio" name="number" value="7">
+          </td>
+          <td>
+            sounds completely natural
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            1
+          </td>
+          <td>
+            2
+          </td>
+          <td>
+            3
+          </td>
+          <td>
+            4
+          </td>
+          <td>
+            5
+          </td>
+          <td>
+            6
+          </td>
+          <td>
+            7
+          </td>
+          <td></td>
+        </tr>
+      </table><br>
+      
+      <p>
+        (Optional) Why do you think the continuation was natural or unnatural?
+      </p>
+      <textarea id="trial_comments" rows="3" cols="50"></textarea><br>
+      <div class="comment_err">
+        <br>
+        <p>
+          Be sure to explain (in as few words as you'd like) why you found the continuation natural or unnatural!
+        </p>
+      </div>
+      <div class="center"> 
+        <button class="continueButton" onclick="_s.button()">Continue</button>
+      </div>
+      <div class="err">
+        <br>
+        <p>
+          Make sure to select a rating before clicking 'Continue'!
+        </p>
+      </div>
+    </div>
+
+    <!-- attention slide -->
+    <div class="slide" id="attention4">
+
+      <!-- placeholders for contexts -->
+      <!-- <p class="case" style="text-align: left;"></p> -->
+      
+      <!-- placeholders for stimuli -->
+      <p class="Sen" id="attention4_sentence" style="color:#FFC20A">
+        I don't support a football team...
+      </p>
+      <p class="Fol" id="attention4_followup" style="color:#0C7BDC">
+        but my brother does.
+      </p>
+      <div class="instruction">
+        <i><strong>Generally speaking</strong>, how natural does the second phrase (the one in blue) sound as a continuation to the first phrase (the one in yellow)?</i>
+      </div>
+      <table class="likertscale">
+        <tr>
+          <td>
+            sounds completely unnatural
+          </td>
+          <td>
+            <input type="radio" name="number" value="1">
+          </td>
+          <td>
+            <input type="radio" name="number" value="2">
+          </td>
+          <td>
+            <input type="radio" name="number" value="3">
+          </td>
+          <td>
+            <input type="radio" name="number" value="4">
+          </td>
+          <td>
+            <input type="radio" name="number" value="5">
+          </td>
+          <td>
+            <input type="radio" name="number" value="6">
+          </td>
+          <td>
+            <input type="radio" name="number" value="7">
+          </td>
+          <td>
+            sounds completely natural
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            1
+          </td>
+          <td>
+            2
+          </td>
+          <td>
+            3
+          </td>
+          <td>
+            4
+          </td>
+          <td>
+            5
+          </td>
+          <td>
+            6
+          </td>
+          <td>
+            7
+          </td>
+          <td></td>
+        </tr>
+      </table><br>
+      
+      <p>
+        (Optional) Why do you think the continuation was natural or unnatural?
+      </p>
+      <textarea id="trial_comments" rows="3" cols="50"></textarea><br>
+      <div class="comment_err">
+        <br>
+        <p>
+          Be sure to explain (in as few words as you'd like) why you found the continuation natural or unnatural!
+        </p>
+      </div>
+      <div class="center"> 
+        <button class="continueButton" onclick="_s.button()">Continue</button>
+      </div>
+      <div class="err">
+        <br>
+        <p>
+          Make sure to select a rating before clicking 'Continue'!
+        </p>
+      </div>
+    </div>
+
+    <!-- trial 5 slide -->
+    <div class="slide" id="trial5">
+
+      <!-- placeholders for contexts -->
+      <!-- <p class="case" style="text-align: left;"></p> -->
+      
+      <!-- placeholders for stimuli -->
+      <p class="Sen" id="trial-Sentence5" style="color:#FFC20A">
+        {{sentence}}
+      </p>
+      <p class="Fol" id="trial-Followup5" style="color:#0C7BDC">
+        {{followup}}
+      </p>
+      <div class="instruction">
+        <i><strong>Generally speaking</strong>, how natural does the second phrase (the one in blue) sound as a continuation to the first phrase (the one in yellow)?</i>
+      </div>
+      <table class="likertscale">
+        <tr>
+          <td>
+            sounds completely unnatural
+          </td>
+          <td>
+            <input type="radio" name="number" value="1">
+          </td>
+          <td>
+            <input type="radio" name="number" value="2">
+          </td>
+          <td>
+            <input type="radio" name="number" value="3">
+          </td>
+          <td>
+            <input type="radio" name="number" value="4">
+          </td>
+          <td>
+            <input type="radio" name="number" value="5">
+          </td>
+          <td>
+            <input type="radio" name="number" value="6">
+          </td>
+          <td>
+            <input type="radio" name="number" value="7">
+          </td>
+          <td>
+            sounds completely natural
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            1
+          </td>
+          <td>
+            2
+          </td>
+          <td>
+            3
+          </td>
+          <td>
+            4
+          </td>
+          <td>
+            5
+          </td>
+          <td>
+            6
+          </td>
+          <td>
+            7
+          </td>
+          <td></td>
+        </tr>
+      </table><br>
+      
+      <p>
+        (Optional) Why do you think the continuation was natural or unnatural?
+      </p>
+      <textarea id="trial_comments" rows="3" cols="50"></textarea><br>
+      <div class="comment_err">
+        <br>
+        <p>
+          Be sure to explain (in as few words as you'd like) why you found the continuation natural or unnatural!
+        </p>
+      </div>
+      <div class="center"> 
+        <button class="continueButton" onclick="_s.button()">Continue</button>
+      </div>
+      <div class="err">
+        <br>
+        <p>
+          Make sure to select a rating before clicking 'Continue'!
+        </p>
+      </div>
+    </div>
+
+    <!-- attention slide -->
+    <div class="slide" id="attention5">
+
+      <!-- placeholders for contexts -->
+      <!-- <p class="case" style="text-align: left;"></p> -->
+      
+      <!-- placeholders for stimuli -->
+      <p class="Sen" id="attention5_sentence" style="color:#FFC20A">
+        Six lawyers are negotiating a contract...
+      </p>
+      <p class="Fol" id="attention5_followup" style="color:#0C7BDC">
+        while seven sixes a cat four.
+      </p>
+      <div class="instruction">
+        <i><strong>Generally speaking</strong>, how natural does the second phrase (the one in blue) sound as a continuation to the first phrase (the one in yellow)?</i>
+      </div>
+      <table class="likertscale">
+        <tr>
+          <td>
+            sounds completely unnatural
+          </td>
+          <td>
+            <input type="radio" name="number" value="1">
+          </td>
+          <td>
+            <input type="radio" name="number" value="2">
+          </td>
+          <td>
+            <input type="radio" name="number" value="3">
+          </td>
+          <td>
+            <input type="radio" name="number" value="4">
+          </td>
+          <td>
+            <input type="radio" name="number" value="5">
+          </td>
+          <td>
+            <input type="radio" name="number" value="6">
+          </td>
+          <td>
+            <input type="radio" name="number" value="7">
+          </td>
+          <td>
+            sounds completely natural
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            1
+          </td>
+          <td>
+            2
+          </td>
+          <td>
+            3
+          </td>
+          <td>
+            4
+          </td>
+          <td>
+            5
+          </td>
+          <td>
+            6
+          </td>
+          <td>
+            7
+          </td>
+          <td></td>
+        </tr>
+      </table><br>
+      
+      <p>
+        (Optional) Why do you think the continuation was natural or unnatural?
+      </p>
+      <textarea id="trial_comments" rows="3" cols="50"></textarea><br>
+      <div class="comment_err">
+        <br>
+        <p>
+          Be sure to explain (in as few words as you'd like) why you found the continuation natural or unnatural!
+        </p>
+      </div>
+      <div class="center"> 
+        <button class="continueButton" onclick="_s.button()">Continue</button>
+      </div>
+      <div class="err">
+        <br>
+        <p>
+          Make sure to select a rating before clicking 'Continue'!
+        </p>
+      </div>
+    </div>
+
+
+    <!-- subject information slide -->
+    <div class="slide" id="subj_info">
+      <div class="long_form">
+        <div class="subj_info_title">
+          Additional information
+        </div>
+        <p class="info">
+          Answering these questions is optional, but will help us understand your answers.
+        </p>
+        <p>
+          Did you read the instructions and do you think you did the experiment correctly?
+        </p><label><input type="radio" name="assess" value="No">No</label> <label><input type="radio" name="assess" value="Yes">Yes</label> <label><input type="radio" name="assess" value="Confused">I was confused</label>
+        <p>
+          Gender: <select id="gender">
+            <option value="">
+            </option>
+            <option value="Male">
+              male
+            </option>
+            <option value="Female">
+              female
+            </option>
+            <option value="Other">
+              other
+            </option>
+          </select>
+        </p>
+        <p>
+          Age: <input type="text" id="age">
+        </p>
+        <p>
+          Level of education: <select id="education">
+            <option value="-1">
+            </option>
+            <option value="0">
+              Some high school
+            </option>
+            <option value="1">
+              Graduated high school
+            </option>
+            <option value="2">
+              Some college
+            </option>
+            <option value="3">
+              Graduated college
+            </option>
+            <option value="4">
+              Hold a higher degree
+            </option>
+          </select>
+        </p>
+        <p>
+          Native language: <input type="text" id="language">
+        </p><label>(the language(s) spoken at home when you were a child)</label>
+        <p>
+          Do you think the payment was fair?
+        </p><select id="fairprice">
+          <option value="-1">
+          </option>
+          <option value="0">
+            The payment was too low
+          </option>
+          <option value="1">
+            The payment was fair
+          </option>
+        </select>
+        <p>
+          Did you enjoy the experiment?
+        </p><select id="enjoyment">
+          <option value="-1">
+          </option>
+          <option value="0">
+            Worse than the average experiment
+          </option>
+          <option value="1">
+            An average experiment
+          </option>
+          <option value="2">
+            Better than average experiment
+          </option>
+        </select>
+        <p>
+          We would be interested in any comments you have about this experiment. Please type them here:
+        </p>
+        <textarea id="comments" rows="3" cols="50"></textarea><br>
+        <button onclick="_s.submit()">Submit</button>
+      </div>
+    </div>
+
+    <!-- final slide -->
+    <div id="thanks" class="slide js">
+      <p class="big">
+        Thanks for your time!
+      </p>
+    </div>
+
+    <!-- progress bar -->
+    <div class="progress">
+      <span>Progress:</span>
+      <div class="bar-wrapper">
+        <div class="bar" style="width: 0%"></div>
+      </div>
+    </div>
+  </body>
+</html>
