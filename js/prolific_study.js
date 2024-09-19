@@ -185,15 +185,11 @@ function make_slides(f) {
     // save response
     log_responses: function() {
       exp.data_trials.push({
-        "idx": this.stim.idx,
+        "id": this.stim.id,
         "sentence_a": this.stim.sentence_a, 
         "sentence_b": this.stim.sentence_b,
-        "stype": this.stim.stype,
-        "ftype": this.stim.ftype,
-        "OP1_type": this.stim.OP1_type,
-        "OP2_type": this.stim.OP2_type,
-        "OP1": this.stim.OP1,
-        "OP2": this.stim.OP2,
+        "shift_a": this.stim.shift_a,
+        "shift_b": this.stim.shift_b,
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
         "response": this.radio,
         "comments": this.comments,
@@ -293,15 +289,11 @@ function make_slides(f) {
     // save response
     log_responses: function() {
       exp.data_trials.push({
-        "idx": this.stim.idx,
+        "id": this.stim.id,
         "sentence_a": this.stim.sentence_a, 
         "sentence_b": this.stim.sentence_b,
-        "stype": this.stim.stype,
-        "ftype": this.stim.ftype,
-        "OP1_type": this.stim.OP1_type,
-        "OP2_type": this.stim.OP2_type,
-        "OP1": this.stim.OP1,
-        "OP2": this.stim.OP2,
+        "shift_a": this.stim.shift_a,
+        "shift_b": this.stim.shift_b,
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
         "response": this.radio,
         "comments": this.comments,
@@ -400,15 +392,11 @@ function make_slides(f) {
     // save response
     log_responses: function() {
       exp.data_trials.push({
-        "idx": this.stim.idx,
+        "id": this.stim.id,
         "sentence_a": this.stim.sentence_a, 
         "sentence_b": this.stim.sentence_b,
-        "stype": this.stim.stype,
-        "ftype": this.stim.ftype,
-        "OP1_type": this.stim.OP1_type,
-        "OP2_type": this.stim.OP2_type,
-        "OP1": this.stim.OP1,
-        "OP2": this.stim.OP2,
+        "shift_a": this.stim.shift_a,
+        "shift_b": this.stim.shift_b,
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
         "response": this.radio,
         "comments": this.comments,
@@ -506,15 +494,11 @@ function make_slides(f) {
     // save response
     log_responses: function() {
       exp.data_trials.push({
-        "idx": this.stim.idx,
+        "id": this.stim.id,
         "sentence_a": this.stim.sentence_a, 
         "sentence_b": this.stim.sentence_b,
-        "stype": this.stim.stype,
-        "ftype": this.stim.ftype,
-        "OP1_type": this.stim.OP1_type,
-        "OP2_type": this.stim.OP2_type,
-        "OP1": this.stim.OP1,
-        "OP2": this.stim.OP2,
+        "shift_a": this.stim.shift_a,
+        "shift_b": this.stim.shift_b,
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
         "response": this.radio,
         "comments": this.comments,
@@ -613,15 +597,11 @@ function make_slides(f) {
     // save response
     log_responses: function() {
       exp.data_trials.push({
-        "idx": this.stim.idx,
+        "id": this.stim.id,
         "sentence_a": this.stim.sentence_a, 
         "sentence_b": this.stim.sentence_b,
-        "stype": this.stim.stype,
-        "ftype": this.stim.ftype,
-        "OP1_type": this.stim.OP1_type,
-        "OP2_type": this.stim.OP2_type,
-        "OP1": this.stim.OP1,
-        "OP2": this.stim.OP2,
+        "shift_a": this.stim.shift_a,
+        "shift_b": this.stim.shift_b,
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
         "response": this.radio,
         "comments": this.comments,
