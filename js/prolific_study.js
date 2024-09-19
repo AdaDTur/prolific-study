@@ -701,9 +701,12 @@ function init() {
   exp.catch_trials = [];
   exp.consent = [];
   var stimuli = all_stims;
+  
+  var list_index = parseInt(get_url_param("list", 0)); // Get list param, default to 0
+  exp.stimuli = _.shuffle(stimuli[list_index]);
 
-  var subset_size = 50; // Change this value to the desired subset size
-  exp.stimuli = _.sample(stimuli, subset_size); // Use _.sample to randomly select a subset
+  var subset_size = 50; // Define the desired subset size
+  exp.stimuli = exp.stimuli.slice(0, subset_size); // Take the first 'subset_size' items after shuffling
 
   exp.n_trials = exp.stimuli.length;
 
