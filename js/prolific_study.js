@@ -702,7 +702,11 @@ function init() {
   exp.consent = [];
   var stimuli = all_stims;
 
-  exp.stimuli = _.shuffle(stimuli[parseInt(get_url_param("list", 0))]); //call _.shuffle(stimuli) to randomize the order;
+  var subset_size = 50; // Change this value to the desired subset size
+  exp.stimuli = _.sample(stimuli, subset_size); // Use _.sample to randomly select a subset
+
+  exp.n_trials = exp.stimuli.length;
+
   var fifth = exp.stimuli.length/5;
   exp.stimuli1 = exp.stimuli.slice(0,fifth);
   exp.stimuli2 = exp.stimuli.slice(fifth,2*fifth);
@@ -710,8 +714,6 @@ function init() {
   exp.stimuli4 = exp.stimuli.slice(3*fifth, 4*fifth);
   exp.stimuli5 = exp.stimuli.slice(4*fifth);  
   
-  exp.n_trials = exp.stimuli.length;
-
   // exp.condition = _.sample(["context", "no-context"]); //can randomize between subjects conditions here
   
   exp.system = {
