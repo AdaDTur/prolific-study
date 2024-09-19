@@ -705,7 +705,7 @@ function init() {
   var list_index = parseInt(get_url_param("list", 0)); // Get list param, default to 0
   exp.stimuli = _.shuffle(stimuli[list_index]);
 
-  var subset_size = 50; // Define the desired subset size
+  var subset_size = 20; // Define the desired subset size
   exp.stimuli = exp.stimuli.slice(0, subset_size); // Take the first 'subset_size' items after shuffling
 
   exp.n_trials = exp.stimuli.length;
