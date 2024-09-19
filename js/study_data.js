@@ -1,4 +1,6 @@
-var allstims = [
+var all_stims = 
+[
+    [
     {
       id: 0,
       sentence_a: "Melissa met the man at the park.",
@@ -3493,4 +3495,4 @@ var allstims = [
       shift_b: "True"
     }
   ]
-}
+]
