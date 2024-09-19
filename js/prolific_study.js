@@ -161,8 +161,8 @@ function make_slides(f) {
       // }
 
       // replace the placeholder in the HTML document with the relevant sentences for this trial
-      $("#trial-SentenceA").html(sentence_a);
-      $("#trial-SentenceB").html(sentence_b);
+      $("#trial-SentenceA1").html(sentence_a);
+      $("#trial-SentenceB1").html(sentence_b);
       $(".err").hide();
       $('.comment_err').hide();
 
@@ -265,8 +265,8 @@ function make_slides(f) {
       var sentence_b = stim.sentence_b;
 
       // replace the placeholder in the HTML document with the relevant sentences for this trial
-      $("#trial-SentenceA").html(sentence_a);
-      $("#trial-SentenceB").html(sentence_b);
+      $("#trial-SentenceA2").html(sentence_a);
+      $("#trial-SentenceB2").html(sentence_b);
       $(".err").hide();
       $('.comment_err').hide();
 
@@ -368,8 +368,8 @@ function make_slides(f) {
       var sentence_b = stim.sentence_b;
 
       // replace the placeholder in the HTML document with the relevant sentences for this trial
-      $("#trial-SentenceA").html(sentence_a);
-      $("#trial-SentenceB").html(sentence_b);
+      $("#trial-SentenceA3").html(sentence_a);
+      $("#trial-SentenceB3").html(sentence_b);
       $(".err").hide();
       $('.comment_err').hide();
 
@@ -470,8 +470,8 @@ function make_slides(f) {
       var sentence_b = stim.sentence_b;
 
       // replace the placeholder in the HTML document with the relevant sentences for this trial
-      $("#trial-SentenceA").html(sentence_a);
-      $("#trial-SentenceB").html(sentence_b);
+      $("#trial-SentenceA4").html(sentence_a);
+      $("#trial-SentenceB4").html(sentence_b);
       $(".err").hide();
       $('.comment_err').hide();
 
@@ -573,8 +573,8 @@ function make_slides(f) {
       var sentence_b = stim.sentence_b;
 
       // replace the placeholder in the HTML document with the relevant sentences for this trial
-      $("#trial-SentenceA").html(sentence_a);
-      $("#trial-SentenceB").html(sentence_b);
+      $("#trial-SentenceA5").html(sentence_a);
+      $("#trial-SentenceB5").html(sentence_b);
       $(".err").hide();
       $('.comment_err').hide();
 
