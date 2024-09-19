@@ -144,8 +144,8 @@ function make_slides(f) {
       this.stim = stim;
 
       // extract original and sentence with "but not all"
-      var sentence = stim.sentence;
-      var followup = stim.followup;
+      var sentence_a = stim.sentence_a;
+      var sentence_b = stim.sentence_b;
 
       //handle display of context 
       // if (exp.condition == "context") {
@@ -161,8 +161,8 @@ function make_slides(f) {
       // }
 
       // replace the placeholder in the HTML document with the relevant sentences for this trial
-      $("#trial-Sentence1").html(sentence);
-      $("#trial-Followup1").html(followup);
+      $("#trial-SentenceA").html(sentence_a);
+      $("#trial-SentenceB").html(sentence_b);
       $(".err").hide();
       $('.comment_err').hide();
 
@@ -186,8 +186,8 @@ function make_slides(f) {
     log_responses: function() {
       exp.data_trials.push({
         "idx": this.stim.idx,
-        "sentence": this.stim.sentence, 
-        "followup": this.stim.followup,
+        "sentence_a": this.stim.sentence_a, 
+        "sentence_b": this.stim.sentence_b,
         "stype": this.stim.stype,
         "ftype": this.stim.ftype,
         "OP1_type": this.stim.OP1_type,
@@ -265,12 +265,12 @@ function make_slides(f) {
       this.stim = stim;
 
       // extract original and sentence with "but not all"
-      var sentence = stim.sentence;
-      var followup = stim.followup;
+      var sentence_a = stim.sentence_a;
+      var sentence_b = stim.sentence_b;
 
       // replace the placeholder in the HTML document with the relevant sentences for this trial
-      $("#trial-Sentence2").html(sentence);
-      $("#trial-Followup2").html(followup);
+      $("#trial-SentenceA").html(sentence_a);
+      $("#trial-SentenceB").html(sentence_b);
       $(".err").hide();
       $('.comment_err').hide();
 
@@ -294,8 +294,8 @@ function make_slides(f) {
     log_responses: function() {
       exp.data_trials.push({
         "idx": this.stim.idx,
-        "sentence": this.stim.sentence, 
-        "followup": this.stim.followup,
+        "sentence_a": this.stim.sentence_a, 
+        "sentence_b": this.stim.sentence_b,
         "stype": this.stim.stype,
         "ftype": this.stim.ftype,
         "OP1_type": this.stim.OP1_type,
@@ -372,12 +372,12 @@ function make_slides(f) {
       this.stim = stim;
 
       // extract original and sentence with "but not all"
-      var sentence = stim.sentence;
-      var followup = stim.followup;
+      var sentence_a = stim.sentence_a;
+      var sentence_b = stim.sentence_b;
 
       // replace the placeholder in the HTML document with the relevant sentences for this trial
-      $("#trial-Sentence3").html(sentence);
-      $("#trial-Followup3").html(followup);
+      $("#trial-SentenceA").html(sentence_a);
+      $("#trial-SentenceB").html(sentence_b);
       $(".err").hide();
       $('.comment_err').hide();
 
@@ -401,8 +401,8 @@ function make_slides(f) {
     log_responses: function() {
       exp.data_trials.push({
         "idx": this.stim.idx,
-        "sentence": this.stim.sentence, 
-        "followup": this.stim.followup,
+        "sentence_a": this.stim.sentence_a, 
+        "sentence_b": this.stim.sentence_b,
         "stype": this.stim.stype,
         "ftype": this.stim.ftype,
         "OP1_type": this.stim.OP1_type,
@@ -478,12 +478,12 @@ function make_slides(f) {
       this.stim = stim;
 
       // extract original and sentence with "but not all"
-      var sentence = stim.sentence;
-      var followup = stim.followup;
+      var sentence_a = stim.sentence_a;
+      var sentence_b = stim.sentence_b;
 
       // replace the placeholder in the HTML document with the relevant sentences for this trial
-      $("#trial-Sentence4").html(sentence);
-      $("#trial-Followup4").html(followup);
+      $("#trial-SentenceA").html(sentence_a);
+      $("#trial-SentenceB").html(sentence_b);
       $(".err").hide();
       $('.comment_err').hide();
 
@@ -507,8 +507,8 @@ function make_slides(f) {
     log_responses: function() {
       exp.data_trials.push({
         "idx": this.stim.idx,
-        "sentence": this.stim.sentence, 
-        "followup": this.stim.followup,
+        "sentence_a": this.stim.sentence_a, 
+        "sentence_b": this.stim.sentence_b,
         "stype": this.stim.stype,
         "ftype": this.stim.ftype,
         "OP1_type": this.stim.OP1_type,
@@ -585,12 +585,12 @@ function make_slides(f) {
       this.stim = stim;
 
       // extract original and sentence with "but not all"
-      var sentence = stim.sentence;
-      var followup = stim.followup;
+      var sentence_a = stim.sentence_a;
+      var sentence_b = stim.sentence_b;
 
       // replace the placeholder in the HTML document with the relevant sentences for this trial
-      $("#trial-Sentence5").html(sentence);
-      $("#trial-Followup5").html(followup);
+      $("#trial-SentenceA").html(sentence_a);
+      $("#trial-SentenceB").html(sentence_b);
       $(".err").hide();
       $('.comment_err').hide();
 
@@ -614,8 +614,8 @@ function make_slides(f) {
     log_responses: function() {
       exp.data_trials.push({
         "idx": this.stim.idx,
-        "sentence": this.stim.sentence, 
-        "followup": this.stim.followup,
+        "sentence_a": this.stim.sentence_a, 
+        "sentence_b": this.stim.sentence_b,
         "stype": this.stim.stype,
         "ftype": this.stim.ftype,
         "OP1_type": this.stim.OP1_type,
