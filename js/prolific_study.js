@@ -147,10 +147,6 @@ function make_slides(f) {
       var sentence_a = stim.sentence_a;
       var sentence_b = stim.sentence_b;
 
-      <script>
-      document.write(sentence_a)
-      </script>
-
       //handle display of context 
       // if (exp.condition == "context") {
       //   // extract context data
