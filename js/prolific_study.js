@@ -702,35 +702,17 @@ function init() {
   exp.consent = [];
   var stimuli = all_stims;
   
-  // exp.stimuli = _.shuffle(stimuli[parseInt(get_url_param("list", 0))]);
-  var t_fifth = exp.stimuli.length/25;
-  exp.stimuli1 = exp.stimuli.slice(0,t_fifth);
-  exp.stimuli2 = exp.stimuli.slice(t_fifth,2*t_fifth);
-  exp.stimuli3 = exp.stimuli.slice(2*t_fifth,3*t_fifth);
-  exp.stimuli4 = exp.stimuli.slice(3*t_fifth, 4*t_fifth);
-  exp.stimuli5 = exp.stimuli.slice(4*t_fifth, 5*t_fifth);
-  exp.stimuli1 = exp.stimuli.slice(5*t_fifth,6*t_fifth);
-  exp.stimuli2 = exp.stimuli.slice(6*t_fifth,7*t_fifth);
-  exp.stimuli3 = exp.stimuli.slice(7*t_fifth,8*t_fifth);
-  exp.stimuli4 = exp.stimuli.slice(8*t_fifth, 9*t_fifth);
-  exp.stimuli5 = exp.stimuli.slice(9*t_fifth,10*t_fifth);  
-  exp.stimuli1 = exp.stimuli.slice(10*t_fifth,11*t_fifth);
-  exp.stimuli2 = exp.stimuli.slice(11*fifth,12*t_fifth);
-  exp.stimuli3 = exp.stimuli.slice(12*t_fifth,13*t_fifth);
-  exp.stimuli4 = exp.stimuli.slice(13*t_fifth, 14*t_fifth);
-  exp.stimuli5 = exp.stimuli.slice(14*t_fifth,15*t_fifth);  
-  exp.stimuli1 = exp.stimuli.slice(15*t_fifth,16*t_fifth);
-  exp.stimuli2 = exp.stimuli.slice(16*fifth,17*t_fifth);
-  exp.stimuli3 = exp.stimuli.slice(17*t_fifth,18*t_fifth);
-  exp.stimuli4 = exp.stimuli.slice(18*t_fifth, 19*t_fifth);
-  exp.stimuli5 = exp.stimuli.slice(19*t_fifth,20*t_fifth);  
-  exp.stimuli1 = exp.stimuli.slice(20*t_fifth,21*t_fifth);
-  exp.stimuli2 = exp.stimuli.slice(21*fifth,22*t_fifth);
-  exp.stimuli3 = exp.stimuli.slice(22*t_fifth,23*t_fifth);
-  exp.stimuli4 = exp.stimuli.slice(23*t_fifth, 24*t_fifth);
-  exp.stimuli5 = exp.stimuli.slice(24*t_fifth);  
+  var list_index = parseInt(get_url_param("list", 0)); // Get list param, default to 0
+  exp.stimuli = _.shuffle(stimuli[list_index]);
 
   exp.n_trials = exp.stimuli.length;
+
+  var fifth = exp.stimuli.length/5;
+  exp.stimuli1 = exp.stimuli.slice(0,fifth);
+  exp.stimuli2 = exp.stimuli.slice(fifth,2*fifth);
+  exp.stimuli3 = exp.stimuli.slice(2*fifth,3*fifth);
+  exp.stimuli4 = exp.stimuli.slice(3*fifth, 4*fifth);
+  exp.stimuli5 = exp.stimuli.slice(4*fifth);  
   
   // exp.condition = _.sample(["context", "no-context"]); //can randomize between subjects conditions here
   
