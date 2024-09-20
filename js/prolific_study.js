@@ -702,20 +702,15 @@ function init() {
   exp.consent = [];
   var stimuli = all_stims;
   
-  var list_index = parseInt(get_url_param("list", 0)); // Get list param, default to 0
-  exp.stimuli = _.shuffle(stimuli[list_index]);
-
-  var subset_size = 20; // Define the desired subset size
-  exp.stimuli = exp.stimuli.slice(0, subset_size); // Take the first 'subset_size' items after shuffling
-
-  exp.n_trials = exp.stimuli.length;
-
+  // exp.stimuli = _.shuffle(stimuli[parseInt(get_url_param("list", 0))]);
   var fifth = exp.stimuli.length/5;
   exp.stimuli1 = exp.stimuli.slice(0,fifth);
   exp.stimuli2 = exp.stimuli.slice(fifth,2*fifth);
   exp.stimuli3 = exp.stimuli.slice(2*fifth,3*fifth);
   exp.stimuli4 = exp.stimuli.slice(3*fifth, 4*fifth);
   exp.stimuli5 = exp.stimuli.slice(4*fifth);  
+
+  exp.n_trials = exp.stimuli.length;
   
   // exp.condition = _.sample(["context", "no-context"]); //can randomize between subjects conditions here
   
