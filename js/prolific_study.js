@@ -6,19 +6,19 @@ function make_slides(f) {
   slides.i0 = slide({
     name: "i0",
     start: function() {
-      $('.badrating_err').hide();
-      $('.norating_err').hide();
-      exp.startT = Date.now();
+      exp.startT = Date.now(); // Start experiment timer
     },
     log_responses: function() {
-      exp.consent.push({"consent": "I consent to take part in the study. I agree to the anonymous use of the data in research presentations, publications, and online interactive sites to illustrate the findings. I agree that the collected data could be used in related follow-up studies. I agree to the use of the data in a not-for-profit anonymous corpus for research purposes which others will have access to."})
+      exp.consent.push({
+        "consent": "I consent to take part in the study. I agree to the anonymous use of the data in research presentations, publications, and online interactive sites to illustrate the findings. I agree that the collected data could be used in related follow-up studies. I agree to the use of the data in a not-for-profit anonymous corpus for research purposes which others will have access to."
+      });
     },
     button: function() {
-      this.log_responses()
-      exp.go(); //use exp.go() if and only if there is no "present" data.
+      this.log_responses(); // Log consent
+      exp.go(); // Move to the next slide
     },
-    })
-  
+  });
+    
 
   // set up the first example slide
   slides.example1 = slide({
