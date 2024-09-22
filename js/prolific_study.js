@@ -6,12 +6,19 @@ function make_slides(f) {
   slides.i0 = slide({
     name: "i0",
     start: function() {
-      $('.badrating_err').hide();
-      $('.norating_err').hide(); // ensure that both error messages are hidden on the intro slide
+      // Conditionally hide error messages only if they exist
+      if ($('.badrating_err').length) {
+        $('.badrating_err').hide();
+      }
+      if ($('.norating_err').length) {
+        $('.norating_err').hide();
+      }
       exp.startT = Date.now();
     },
     log_responses: function() {
-      exp.consent.push({"consent": "I consent to take part in the study. I agree to the anonymous use of the data in research presentations, publications, and online interactive sites to illustrate the findings. I agree that the collected data could be used in related follow-up studies. I agree to the use of the data in a not-for-profit anonymous corpus for research purposes which others will have access to."})
+      exp.consent.push({
+        "consent": "I consent to take part in the study. I agree to the anonymous use of the data in research presentations, publications, and online interactive sites to illustrate the findings. I agree that the collected data could be used in related follow-up studies. I agree to the use of the data in a not-for-profit anonymous corpus for research purposes which others will have access to."
+      });
     },
     button: function() {
       this.log_responses();
