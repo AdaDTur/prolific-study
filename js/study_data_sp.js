@@ -28,9 +28,9 @@ var all_stims =
     {
       "Unnamed: 0": 113,
       "id": 4200,
-      "sentence_a": "Melissan enjoyed strenuous courses on astronomy under the famous professor during the day.",
+      "sentence_a": "Melissa enjoyed strenuous courses on astronomy under the famous professor during the day.",
       "shift_a": false,
-      "sentence_b": "Melissan enjoyed during the day strenuous courses on astronomy under the famous professor.",
+      "sentence_b": "Melissa enjoyed during the day strenuous courses on astronomy under the famous professor.",
       "shift_b": true
     },
     {
@@ -222,9 +222,9 @@ var all_stims =
     {
       "Unnamed: 0": 112,
       "id": 4119,
-      "sentence_a": "Melissan enjoyed fascinating strenuous courses for her graduate program from NASA at her university.",
+      "sentence_a": "Melissa enjoyed fascinating strenuous courses for her graduate program from NASA at her university.",
       "shift_a": false,
-      "sentence_b": "Melissan enjoyed at her university fascinating strenuous courses for her graduate program from NASA.",
+      "sentence_b": "Melissa enjoyed at her university fascinating strenuous courses for her graduate program from NASA.",
       "shift_b": true
     },
     {
@@ -246,9 +246,9 @@ var all_stims =
     {
       "Unnamed: 0": 108,
       "id": 3924,
-      "sentence_a": "Melissan enjoyed fascinating courses from NASA at the college.",
+      "sentence_a": "Melissa enjoyed fascinating courses from NASA at the college.",
       "shift_a": false,
-      "sentence_b": "Melissan enjoyed at the college fascinating courses from NASA.",
+      "sentence_b": "Melissa enjoyed at the college fascinating courses from NASA.",
       "shift_b": true
     },
     {
@@ -1186,9 +1186,9 @@ var all_stims =
     {
       "Unnamed: 0": 111,
       "id": 4067,
-      "sentence_a": "Melissan enjoyed strenuous courses under the famous professor at her university.",
+      "sentence_a": "Melissa enjoyed strenuous courses under the famous professor at her university.",
       "shift_a": false,
-      "sentence_b": "Melissan enjoyed at her university strenuous courses under the famous professor.",
+      "sentence_b": "Melissa enjoyed at her university strenuous courses under the famous professor.",
       "shift_b": true
     },
     {
@@ -1316,9 +1316,9 @@ var all_stims =
     {
       "Unnamed: 0": 115,
       "id": 4253,
-      "sentence_a": "Melissan enjoyed fascinating strenuous courses for her graduate program under the famous professor from NASA during the day.",
+      "sentence_a": "Melissa enjoyed fascinating strenuous courses for her graduate program under the famous professor from NASA during the day.",
       "shift_a": false,
-      "sentence_b": "Melissan enjoyed during the day fascinating strenuous courses for her graduate program under the famous professor from NASA.",
+      "sentence_b": "Melissa enjoyed during the day fascinating strenuous courses for her graduate program under the famous professor from NASA.",
       "shift_b": true
     },
     {
@@ -1412,9 +1412,9 @@ var all_stims =
     {
       "Unnamed: 0": 109,
       "id": 3926,
-      "sentence_a": "Melissan enjoyed fascinating courses for her graduate program under the famous professor at the college.",
+      "sentence_a": "Melissa enjoyed fascinating courses for her graduate program under the famous professor at the college.",
       "shift_a": false,
-      "sentence_b": "Melissan enjoyed at the college fascinating courses for her graduate program under the famous professor.",
+      "sentence_b": "Melissa enjoyed at the college fascinating courses for her graduate program under the famous professor.",
       "shift_b": true
     },
     {
@@ -1842,9 +1842,9 @@ var all_stims =
     {
       "Unnamed: 0": 107,
       "id": 3920,
-      "sentence_a": "Melissan enjoyed fascinating courses at the college.",
+      "sentence_a": "Melissa enjoyed fascinating courses at the college.",
       "shift_a": false,
-      "sentence_b": "Melissan enjoyed at the college fascinating courses.",
+      "sentence_b": "Melissa enjoyed at the college fascinating courses.",
       "shift_b": true
     },
     {
@@ -3810,9 +3810,9 @@ var all_stims =
     {
       "Unnamed: 0": 114,
       "id": 4249,
-      "sentence_a": "Melissan enjoyed fascinating strenuous courses on astronomy from NASA during the day.",
+      "sentence_a": "Melissa enjoyed fascinating strenuous courses on astronomy from NASA during the day.",
       "shift_a": false,
-      "sentence_b": "Melissan enjoyed during the day fascinating strenuous courses on astronomy from NASA.",
+      "sentence_b": "Melissa enjoyed during the day fascinating strenuous courses on astronomy from NASA.",
       "shift_b": true
     },
     {
@@ -3874,9 +3874,9 @@ var all_stims =
     {
       "Unnamed: 0": 110,
       "id": 3990,
-      "sentence_a": "Melissan enjoyed fascinating strenuous courses for her graduate program under the famous professor at the college.",
+      "sentence_a": "Melissa enjoyed fascinating strenuous courses for her graduate program under the famous professor at the college.",
       "shift_a": false,
-      "sentence_b": "Melissan enjoyed at the college fascinating strenuous courses for her graduate program under the famous professor.",
+      "sentence_b": "Melissa enjoyed at the college fascinating strenuous courses for her graduate program under the famous professor.",
       "shift_b": true
     },
     {
