@@ -6,13 +6,6 @@ function make_slides(f) {
   slides.i0 = slide({
     name: "i0",
     start: function() {
-      // Conditionally hide error messages only if they exist
-      if ($('.badrating_err').length) {
-        $('.badrating_err').hide();
-      }
-      if ($('.norating_err').length) {
-        $('.norating_err').hide();
-      }
       exp.startT = Date.now();
     },
     log_responses: function() {
