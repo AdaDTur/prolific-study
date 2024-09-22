@@ -15,7 +15,7 @@ function make_slides(f) {
       this.log_responses()
       exp.go(); //use exp.go() if and only if there is no "present" data.
     },
-    })
+  })
   
 
   // set up the first example slide
