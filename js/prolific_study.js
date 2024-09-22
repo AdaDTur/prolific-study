@@ -6,7 +6,7 @@ function make_slides(f) {
   slides.i0 = slide({
     name: "i0",
     start: function() {
-      exp.startT = Date.now();
+      exp.startT = Date.now();  // Start the experiment time
     },
     log_responses: function() {
       exp.consent.push({
@@ -15,7 +15,7 @@ function make_slides(f) {
     },
     button: function() {
       this.log_responses();
-      exp.go(); //use exp.go() if and only if there is no "present" data.
+      exp.go();  // Proceed to the next slide
     },
   });
 
