@@ -36,7 +36,7 @@
     padding-bottom: 0.5cm;
 
 }
-.targetSen{
+.sentence_a{
     color:#2E9AFE;
 }
 
@@ -45,11 +45,11 @@
     font-size:22;
 }
 
-.originalSen {
+.sentence_b {
 	color: #E7532B;
 }
 
-.targetSen, .originalSen {
+.sentence_a, .sentence_b {
 	text-align:left;
 	font-size:20;
 }
