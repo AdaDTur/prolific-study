@@ -29,17 +29,24 @@ function make_slides(f) {
         },
 
         button: function() {
+          // read in the value of the selected radio button
           this.radio = $("input[name='number']:checked").val();
-          console.log("Radio selected: ", this.radio);
-        
-          if (this.radio) {
-            console.log("Valid rating selected.");
-            $('.norating_err').hide();
-            this.log_responses();
-            exp.go();
+          // check whether the participant selected a reasonable value (i.e, 5, 6, or 7)
+          if (this.radio){
+            if (this.radio == "5" || this.radio == "6" || this.radio == "7") {
+              // log response
+              this.log_responses();
+              // continue to next slide
+              exp.go();
+            } else {
+              // participant gave non-reasonable response --> show error message
+              $('.norating_err').hide();
+              $('.badrating_err').show();
+            }
           } else {
-            console.log("No rating selected, showing error.");
+            $('.badrating_err').hide();
             $('.norating_err').show();
+          
           }
         },
   
