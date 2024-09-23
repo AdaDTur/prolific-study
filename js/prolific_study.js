@@ -2,6 +2,29 @@
 function make_slides(f) {
     var slides = {};
 
+    button: function() {
+      this.radio = $("input[name='number']:checked").val();
+      console.log("Radio button selected: ", this.radio);
+    
+      if (this.radio) {
+        if (this.radio == "1" || this.radio == "2" || this.radio == "3") {
+          $('.norating_err').hide();
+          $('.badrating_err').hide();
+          console.log("Valid selection, moving to next slide");
+          this.log_responses();
+          exp.go();
+        } else {
+          console.log("Invalid rating, showing bad rating error");
+          $('.norating_err').hide();
+          $('.badrating_err').show();
+        }
+      } else {
+        console.log("No rating selected, showing no rating error");
+        $('.badrating_err').hide();
+        $('.norating_err').show();
+      }
+    }
+
     // set up initial slide
     slides.i0 = slide({
       name: "i0",
