@@ -6,6 +6,7 @@ function make_slides(f) {
     slides.i0 = slide({
       name: "i0",
       start: function() {
+        $('.norating_err').hide();
         exp.startT = Date.now();
       },
       log_responses: function() {
