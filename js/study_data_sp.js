@@ -448,9 +448,9 @@ var all_stims =
     {
       "Unnamed: 0": 159,
       "id": 41380,
-      "sentence_a": "John played a energetic pop song for his caring mom from North Carolina.",
+      "sentence_a": "John played an energetic pop song for his caring mom from North Carolina.",
       "shift_a": false,
-      "sentence_b": "John played his caring mom from North Carolina a energetic pop song.",
+      "sentence_b": "John played his caring mom from North Carolina an energetic pop song.",
       "shift_b": true
     },
     {
@@ -538,9 +538,9 @@ var all_stims =
     {
       "Unnamed: 0": 155,
       "id": 36902,
-      "sentence_a": "John played a energetic pop song from his favorite record label for his new visiting exchange roommate.",
+      "sentence_a": "John played an energetic pop song from his favorite record label for his new visiting exchange roommate.",
       "shift_a": false,
-      "sentence_b": "John played his new visiting exchange roommate a energetic pop song from his favorite record label.",
+      "sentence_b": "John played his new visiting exchange roommate an energetic pop song from his favorite record label.",
       "shift_b": true
     },
     {
@@ -3696,9 +3696,9 @@ var all_stims =
     {
       "Unnamed: 0": 157,
       "id": 40804,
-      "sentence_a": "John played a energetic pop song for his sweet mom with a film degree.",
+      "sentence_a": "John played an energetic pop song for his sweet mom with a film degree.",
       "shift_a": false,
-      "sentence_b": "John played his sweet mom with a film degree a energetic pop song.",
+      "sentence_b": "John played his sweet mom with a film degree an energetic pop song.",
       "shift_b": true
     },
     {
