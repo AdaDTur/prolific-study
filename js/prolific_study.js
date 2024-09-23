@@ -1,58 +1,57 @@
 // set up experiment logic for each slide
 function make_slides(f) {
-  var slides = {};
+    var slides = {};
 
-  // set up initial slide
-  slides.i0 = slide({
-    name: "i0",
-    start: function() {
-      exp.startT = Date.now();
-    },
-    log_responses: function() {
-      exp.consent.push({"consent": "I consent to take part in the study. I agree to the anonymous use of the data in research presentations, publications, and online interactive sites to illustrate the findings. I agree that the collected data could be used in related follow-up studies. I agree to the use of the data in a not-for-profit anonymous corpus for research purposes which others will have access to."})
-    },
-    button: function() {
-      this.log_responses()
-      exp.go(); //use exp.go() if and only if there is no "present" data.
-    },
-  })
+    // set up initial slide
+    slides.i0 = slide({
+      name: "i0",
+      start: function() {
+        exp.startT = Date.now();
+      },
+      log_responses: function() {
+        exp.consent.push({"consent": "I consent to take part in the study. I agree to the anonymous use of the data in research presentations, publications, and online interactive sites to illustrate the findings. I agree that the collected data could be used in related follow-up studies. I agree to the use of the data in a not-for-profit anonymous corpus for research purposes which others will have access to."})
+      },
+      button: function() {
+        this.log_responses()
+        exp.go(); //use exp.go() if and only if there is no "present" data.
+      },
+    })
   
 
   // Example 1 slide logic
-  slides.example1 = slide({
+    slides.example1 = slide({
     name: "example1",
   
     start: function() {
-      // Ensure all error messages are hidden at the start
-      $('.badrating_err').hide();
+      // Hide all errors at the beginning of the slide
       $('.norating_err').hide();
+      $('.badrating_err').hide();
     },
   
     button: function() {
-      // Get the value of the selected radio button
+      // Check if the user has selected a radio button
       this.radio = $("input[name='number']:checked").val();
   
-      // If a radio button is selected
       if (this.radio) {
         if (this.radio == "1" || this.radio == "2" || this.radio == "3") {
-          // Valid rating: log response and continue to the next slide
-          $('.norating_err').hide(); // Make sure the error is hidden
+          // Valid rating, hide error, log response, move to next slide
+          $('.norating_err').hide();
+          $('.badrating_err').hide();
           this.log_responses();
-          exp.go(); // Move to next slide
+          exp.go();
         } else {
-          // Invalid rating selected: hide no rating error, show bad rating error
+          // Invalid rating, show bad rating error
           $('.norating_err').hide();
           $('.badrating_err').show();
         }
       } else {
-        // No radio button is selected: show no rating error
-        $('.badrating_err').hide(); // Hide other errors
-        $('.norating_err').show();  // Show the no rating error
+        // No rating selected, show no rating error
+        $('.badrating_err').hide();
+        $('.norating_err').show();
       }
     },
   
     log_responses: function() {
-      // Log the selected rating for this trial
       exp.data_trials.push({
         "slide_number_in_experiment": exp.phase,
         "id": "example1",
