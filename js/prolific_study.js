@@ -690,6 +690,7 @@ function init() {
   exp.catch_trials = [];
   exp.consent = [];
   var stimuli = all_stims;
+  
   var list_index = parseInt(get_url_param("list", 0)); // Get list param, default to 0
   exp.stimuli = _.shuffle(stimuli[list_index]);
 
@@ -732,6 +733,7 @@ function init() {
     "subj_info",
     "thanks"
   ];
+
   exp.data_trials = [];
 
   //make corresponding slides:
