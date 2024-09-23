@@ -33,7 +33,7 @@ function make_slides(f) {
           this.radio = $("input[name='number']:checked").val();
           // check whether the participant selected a reasonable value (i.e, 5, 6, or 7)
           if (this.radio){
-            if (this.radio == "5" || this.radio == "6" || this.radio == "7") {
+            if (this.radio == "1" || this.radio == "2" || this.radio == "3") {
               // log response
               this.log_responses();
               // continue to next slide
