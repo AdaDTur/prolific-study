@@ -16,49 +16,49 @@ function make_slides(f) {
         exp.go(); //use exp.go() if and only if there is no "present" data.
       },
     })
-  
+    
 
-  // Example 1 slide logic
+    // Example 1 slide logic
     slides.example1 = slide({
-    name: "example1",
+        name: "example1",
+    
+        start: function() {
+            // Hide all errors at the beginning of the slide
+            $('.norating_err').hide();
+            $('.badrating_err').hide();
+        },
+
+        button: function() {
+          // Check if the user has selected a radio button
+          this.radio = $("input[name='number']:checked").val();
+      
+          if (this.radio) {
+            if (this.radio == "1" || this.radio == "2" || this.radio == "3") {
+              // Valid rating, hide error, log response, move to next slide
+              $('.norating_err').hide();
+              $('.badrating_err').hide();
+              this.log_responses();
+              exp.go();
+            } else {
+              // Invalid rating, show bad rating error
+              $('.norating_err').hide();
+              $('.badrating_err').show();
+            }
+          } else {
+            // No rating selected, show no rating error
+            $('.badrating_err').hide();
+            $('.norating_err').show();
+          }
+        },
   
-    start: function() {
-      // Hide all errors at the beginning of the slide
-      $('.norating_err').hide();
-      $('.badrating_err').hide();
-    },
-  
-    button: function() {
-      // Check if the user has selected a radio button
-      this.radio = $("input[name='number']:checked").val();
-  
-      if (this.radio) {
-        if (this.radio == "1" || this.radio == "2" || this.radio == "3") {
-          // Valid rating, hide error, log response, move to next slide
-          $('.norating_err').hide();
-          $('.badrating_err').hide();
-          this.log_responses();
-          exp.go();
-        } else {
-          // Invalid rating, show bad rating error
-          $('.norating_err').hide();
-          $('.badrating_err').show();
-        }
-      } else {
-        // No rating selected, show no rating error
-        $('.badrating_err').hide();
-        $('.norating_err').show();
-      }
-    },
-  
-    log_responses: function() {
-      exp.data_trials.push({
-        "slide_number_in_experiment": exp.phase,
-        "id": "example1",
-        "response": this.radio,
-      });
-    },
-  });
+        log_responses: function() {
+          exp.data_trials.push({
+            "slide_number_in_experiment": exp.phase,
+            "id": "example1",
+            "response": this.radio,
+          });
+        },
+    });
 
 
   // set up slide for second example trial
