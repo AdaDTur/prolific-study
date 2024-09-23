@@ -18,51 +18,49 @@ function make_slides(f) {
   })
   
 
-  // set up the first example slide
+  // Example 1 slide logic
   slides.example1 = slide({
     name: "example1",
-
-    // this is executed when the slide is shown
+  
     start: function() {
-      // hide error message
+      // Ensure all error messages are hidden at the start
       $('.badrating_err').hide();
       $('.norating_err').hide();
     },
-
-    // this is executed when the participant clicks the "Continue button"
+  
     button: function() {
-      // read in the value of the selected radio button
+      // Get the value of the selected radio button
       this.radio = $("input[name='number']:checked").val();
-      // check whether the participant selected a reasonable value (i.e, 1, 2, or 3)
-      if (this.radio){
+  
+      // If a radio button is selected
+      if (this.radio) {
         if (this.radio == "1" || this.radio == "2" || this.radio == "3") {
-          // log response
+          // Valid rating: log response and continue to the next slide
+          $('.norating_err').hide(); // Make sure the error is hidden
           this.log_responses();
-          // continue to next slide
-          exp.go();
+          exp.go(); // Move to next slide
         } else {
-          // participant gave non-reasonable response --> show error message
+          // Invalid rating selected: hide no rating error, show bad rating error
           $('.norating_err').hide();
           $('.badrating_err').show();
         }
       } else {
-        $('.badrating_err').hide();
-        $('.norating_err').show();
-      
+        // No radio button is selected: show no rating error
+        $('.badrating_err').hide(); // Hide other errors
+        $('.norating_err').show();  // Show the no rating error
       }
     },
-
+  
     log_responses: function() {
-      // add response to exp.data_trials
-      // this data will be submitted at the end of the experiment
+      // Log the selected rating for this trial
       exp.data_trials.push({
         "slide_number_in_experiment": exp.phase,
         "id": "example1",
         "response": this.radio,
-        
       });
     },
   });
+
 
   // set up slide for second example trial
   slides.example2 = slide({
