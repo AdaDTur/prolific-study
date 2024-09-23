@@ -732,7 +732,6 @@ function init() {
     "subj_info",
     "thanks"
   ];
-  document.querySelectorAll('.badrating_err').forEach(el => el.style.display = 'none');
   exp.data_trials = [];
 
   //make corresponding slides:
