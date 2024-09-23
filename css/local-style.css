@@ -141,12 +141,3 @@ td:nth-child(9) {
 .slide {
 	border: 1px solid #666;
 }
-
-.norating_err {
-    display: none;
-    color: red;
-    position: relative; /* Ensure it's contained within its parent */
-    margin: 20px 0;
-    left: 0;
-    border: 1px solid red; /* Add for debugging */
-}
