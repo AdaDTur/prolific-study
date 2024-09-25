@@ -160,7 +160,7 @@ function make_slides(f) {
       // replace the placeholder in the HTML document with the relevant sentences for this trial
       $("#trial-SentenceA1").html(sentence_a);
       $("#trial-SentenceB1").html(sentence_b);
-      $(".err").hide();
+      $(".norating_err").hide();
       $('.comment_err').hide();
 
     },
@@ -170,12 +170,12 @@ function make_slides(f) {
       this.radio = $("input[name='number']:checked").val();
       this.comments = $("#trial_comments").val();
       if (this.radio) {
-        $('.err').hide()
+        $('.norating_err').hide()
         this.log_responses();
         _stream.apply(this);
         }        
       else {
-        $('.err').show();
+        $('.norating_err').show();
       }
     },
 
@@ -203,7 +203,7 @@ function make_slides(f) {
       // (by default, the selection of the radio persists across trials)
       $("input[name='number']:checked").prop("checked", false);
       $("#trial_comments").val("");
-      $(".err").hide();
+      $(".norating_err").hide();
       $('.comment_err').hide();
 
     },
@@ -220,12 +220,12 @@ function make_slides(f) {
           this.attention = 1
         }
 
-        $('.err').hide()
+        $('.norating_err').hide()
         this.log_responses();
         exp.go();
         }        
       else {
-        $('.err').show();
+        $('.norating_err').show();
       }
     },
 
@@ -264,7 +264,7 @@ function make_slides(f) {
       // replace the placeholder in the HTML document with the relevant sentences for this trial
       $("#trial-SentenceA2").html(sentence_a);
       $("#trial-SentenceB2").html(sentence_b);
-      $(".err").hide();
+      $(".norating_err").hide();
       $('.comment_err').hide();
 
     },
@@ -274,12 +274,12 @@ function make_slides(f) {
       this.radio = $("input[name='number']:checked").val();
       this.comments = $("#trial_comments").val();
       if (this.radio) {
-        $('.err').hide()
+        $('.norating_err').hide()
         this.log_responses();
         _stream.apply(this);
         }        
       else {
-        $('.err').show();
+        $('.norating_err').show();
       }
     },
 
@@ -307,7 +307,7 @@ function make_slides(f) {
       // (by default, the selection of the radio persists across trials)
       $("input[name='number']:checked").prop("checked", false);
       $("#trial_comments").val("");
-      $(".err").hide();
+      $(".norating_err").hide();
       $('.comment_err').hide();
 
     },
@@ -324,12 +324,12 @@ function make_slides(f) {
           this.attention = 1
         }
 
-        $('.err').hide()
+        $('.norating_err').hide()
         this.log_responses();
         exp.go();
         }        
       else {
-        $('.err').show();
+        $('.norating_err').show();
       }
     },
 
@@ -367,7 +367,7 @@ function make_slides(f) {
       // replace the placeholder in the HTML document with the relevant sentences for this trial
       $("#trial-SentenceA3").html(sentence_a);
       $("#trial-SentenceB3").html(sentence_b);
-      $(".err").hide();
+      $(".norating_err").hide();
       $('.comment_err').hide();
 
     },
@@ -377,12 +377,12 @@ function make_slides(f) {
       this.radio = $("input[name='number']:checked").val();
       this.comments = $("#trial_comments").val();
       if (this.radio) {
-        $('.err').hide()
+        $('.norating_err').hide()
         this.log_responses();
         _stream.apply(this);
         }        
       else {
-        $('.err').show();
+        $('.norating_err').show();
       }
     },
 
@@ -410,7 +410,7 @@ function make_slides(f) {
       // (by default, the selection of the radio persists across trials)
       $("input[name='number']:checked").prop("checked", false);
       $("#trial_comments").val("");
-      $(".err").hide();
+      $(".norating_err").hide();
       $('.comment_err').hide();
     },
 
@@ -426,12 +426,12 @@ function make_slides(f) {
           this.attention = 1
         }
 
-        $('.err').hide()
+        $('.norating_err').hide()
         this.log_responses();
         exp.go();
         }        
       else {
-        $('.err').show();
+        $('.norating_err').show();
       }
     },
 
@@ -469,7 +469,7 @@ function make_slides(f) {
       // replace the placeholder in the HTML document with the relevant sentences for this trial
       $("#trial-SentenceA4").html(sentence_a);
       $("#trial-SentenceB4").html(sentence_b);
-      $(".err").hide();
+      $(".norating_err").hide();
       $('.comment_err').hide();
 
     },
@@ -479,12 +479,12 @@ function make_slides(f) {
       this.radio = $("input[name='number']:checked").val();
       this.comments = $("#trial_comments").val();
       if (this.radio) {
-        $('.err').hide()
+        $('.norating_err').hide()
         this.log_responses();
         _stream.apply(this);
         }        
       else {
-        $('.err').show();
+        $('.norating_err').show();
       }
     },
 
@@ -512,7 +512,7 @@ function make_slides(f) {
       // (by default, the selection of the radio persists across trials)
       $("input[name='number']:checked").prop("checked", false);
       $("#trial_comments").val("");
-      $(".err").hide();
+      $(".norating_err").hide();
       $('.comment_err').hide();
 
     },
@@ -529,12 +529,12 @@ function make_slides(f) {
           this.attention = 1
         }
 
-        $('.err').hide()
+        $('.norating_err').hide()
         this.log_responses();
         exp.go();
         }        
       else {
-        $('.err').show();
+        $('.norating_err').show();
       }
     },
 
@@ -572,7 +572,7 @@ function make_slides(f) {
       // replace the placeholder in the HTML document with the relevant sentences for this trial
       $("#trial-SentenceA5").html(sentence_a);
       $("#trial-SentenceB5").html(sentence_b);
-      $(".err").hide();
+      $(".norating_err").hide();
       $('.comment_err').hide();
 
     },
@@ -582,12 +582,12 @@ function make_slides(f) {
       this.radio = $("input[name='number']:checked").val();
       this.comments = $("#trial_comments").val();
       if (this.radio) {
-        $('.err').hide()
+        $('.norating_err').hide()
         this.log_responses();
         _stream.apply(this);
         }        
       else {
-        $('.err').show();
+        $('.norating_err').show();
       }
     },
 
@@ -615,7 +615,7 @@ function make_slides(f) {
       // (by default, the selection of the radio persists across trials)
       $("input[name='number']:checked").prop("checked", false);
         $("#trial_comments").val("");
-        $(".err").hide();
+        $(".norating_err").hide();
         $('.comment_err').hide();
 
     },
@@ -632,12 +632,12 @@ function make_slides(f) {
           this.attention = 1
         }
 
-        $('.err').hide()
+        $('.norating_err').hide()
         this.log_responses();
         exp.go();
         }        
       else {
-        $('.err').show();
+        $('.norating_err').show();
       }
     },
 
