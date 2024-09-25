@@ -214,10 +214,10 @@ function make_slides(f) {
       this.comments = $("#trial_comments").val();
       if (this.radio) {
         if (this.radio == "1" | this.radio == "2" | this.radio == "3") {
-          this.attention = 1
+          this.attention = 0
         }
         else {
-          this.attention = 0
+          this.attention = 1
         }
 
         $('.err').hide()
@@ -318,10 +318,10 @@ function make_slides(f) {
       this.comments = $("#trial_comments").val();
       if (this.radio) {
         if (this.radio == "5" | this.radio == "6" | this.radio == "7") {
-          this.attention = 1
+          this.attention = 0
         }
         else {
-          this.attention = 0
+          this.attention = 1
         }
 
         $('.err').hide()
@@ -420,10 +420,10 @@ function make_slides(f) {
       this.comments = $("#trial_comments").val();
       if (this.radio) {
         if (this.radio == "1" | this.radio == "2" | this.radio == "3") {
-          this.attention = 1
+          this.attention = 0
         }
         else {
-          this.attention = 0
+          this.attention = 1
         }
 
         $('.err').hide()
@@ -523,10 +523,10 @@ function make_slides(f) {
       this.comments = $("#trial_comments").val();
       if (this.radio) {
         if (this.radio == "5" | this.radio == "6" | this.radio == "7") {
-          this.attention = 1
+          this.attention = 0
         }
         else {
-          this.attention = 0
+          this.attention = 1
         }
 
         $('.err').hide()
@@ -626,10 +626,10 @@ function make_slides(f) {
       this.comments = $("#trial_comments").val();
       if (this.radio) {
         if (this.radio == "1" | this.radio == "2" | this.radio == "3") {
-          this.attention = 1
+          this.attention = 0
         }
         else {
-          this.attention = 0
+          this.attention = 1
         }
 
         $('.err').hide()
