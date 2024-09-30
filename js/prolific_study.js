@@ -141,8 +141,8 @@ function make_slides(f) {
       this.stim = stim;
 
       // extract original and sentence with "but not all"
-      var nonshifted_sentence = stim.shifted_sentence;
-      var shifted_sentence = stim.nonshifted_sentence;
+      var nonshifted_sentence = stim.nonshifted_sentence;
+      var shifted_sentence = stim.shifted_sentence;
 
       //handle display of context 
       // if (exp.condition == "context") {
@@ -185,8 +185,6 @@ function make_slides(f) {
         "id": this.stim.id,
         "nonshifted_sentence": this.stim.shifted_sentence, 
         "shifted_sentence": this.stim.nonshifted_sentence,
-        "shift_a": this.stim.shift_a,
-        "shift_b": this.stim.shift_b,
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
         "response": this.radio,
         "comments": this.comments,
@@ -289,8 +287,6 @@ function make_slides(f) {
         "id": this.stim.id,
         "nonshifted_sentence": this.stim.nonshifted_sentence, 
         "shifted_sentence": this.stim.shifted_sentence,
-        "shift_a": this.stim.shift_a,
-        "shift_b": this.stim.shift_b,
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
         "response": this.radio,
         "comments": this.comments,
@@ -392,8 +388,6 @@ function make_slides(f) {
         "id": this.stim.id,
         "nonshifted_sentence": this.stim.nonshifted_sentence, 
         "shifted_sentence": this.stim.shifted_sentence,
-        "shift_a": this.stim.shift_a,
-        "shift_b": this.stim.shift_b,
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
         "response": this.radio,
         "comments": this.comments,
@@ -494,8 +488,6 @@ function make_slides(f) {
         "id": this.stim.id,
         "nonshifted_sentence": this.stim.nonshifted_sentence, 
         "shifted_sentence": this.stim.shifted_sentence,
-        "shift_a": this.stim.shift_a,
-        "shift_b": this.stim.shift_b,
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
         "response": this.radio,
         "comments": this.comments,
@@ -597,8 +589,6 @@ function make_slides(f) {
         "id": this.stim.id,
         "nonshifted_sentence": this.stim.nonshifted_sentence, 
         "shifted_sentence": this.stim.shifted_sentence,
-        "shift_a": this.stim.shift_a,
-        "shift_b": this.stim.shift_b,
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
         "response": this.radio,
         "comments": this.comments,
