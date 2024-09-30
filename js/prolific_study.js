@@ -141,7 +141,7 @@ function make_slides(f) {
       this.stim = stim;
 
       // extract original and sentence with "but not all"
-      var nonshifted_sentence = stim.nonshifted_sentence;
+      var sentence_a = stim.sentence_a;
       var shifted_sentence = stim.shifted_sentence;
 
       //handle display of context 
@@ -159,7 +159,7 @@ function make_slides(f) {
 
       // replace the placeholder in the HTML document with the relevant sentences for this trial
       $("#trial-SentenceA1").html(shifted_sentence);
-      $("#trial-SentenceB1").html(nonshifted_sentence);
+      $("#trial-SentenceB1").html(sentence_a);
       $(".norating_err").hide();
       $('.comment_err').hide();
 
@@ -183,8 +183,8 @@ function make_slides(f) {
     log_responses: function() {
       exp.data_trials.push({
         "id": this.stim.id,
-        "nonshifted_sentence": this.stim.shifted_sentence, 
-        "shifted_sentence": this.stim.nonshifted_sentence,
+        "sentence_a": this.stim.shifted_sentence, 
+        "shifted_sentence": this.stim.sentence_a,
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
         "response": this.radio,
         "comments": this.comments,
@@ -256,11 +256,11 @@ function make_slides(f) {
       this.stim = stim;
 
       // extract original and sentence with "but not all"
-      var nonshifted_sentence = stim.nonshifted_sentence;
+      var sentence_a = stim.sentence_a;
       var shifted_sentence = stim.shifted_sentence;
 
       // replace the placeholder in the HTML document with the relevant sentences for this trial
-      $("#trial-SentenceA2").html(nonshifted_sentence);
+      $("#trial-SentenceA2").html(sentence_a);
       $("#trial-SentenceB2").html(shifted_sentence);
       $(".norating_err").hide();
       $('.comment_err').hide();
@@ -285,7 +285,7 @@ function make_slides(f) {
     log_responses: function() {
       exp.data_trials.push({
         "id": this.stim.id,
-        "nonshifted_sentence": this.stim.nonshifted_sentence, 
+        "sentence_a": this.stim.sentence_a, 
         "shifted_sentence": this.stim.shifted_sentence,
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
         "response": this.radio,
@@ -357,11 +357,11 @@ function make_slides(f) {
       this.stim = stim;
 
       // extract original and sentence with "but not all"
-      var nonshifted_sentence = stim.nonshifted_sentence;
+      var sentence_a = stim.sentence_a;
       var shifted_sentence = stim.shifted_sentence;
 
       // replace the placeholder in the HTML document with the relevant sentences for this trial
-      $("#trial-SentenceA3").html(nonshifted_sentence);
+      $("#trial-SentenceA3").html(sentence_a);
       $("#trial-SentenceB3").html(shifted_sentence);
       $(".norating_err").hide();
       $('.comment_err').hide();
@@ -386,7 +386,7 @@ function make_slides(f) {
     log_responses: function() {
       exp.data_trials.push({
         "id": this.stim.id,
-        "nonshifted_sentence": this.stim.nonshifted_sentence, 
+        "sentence_a": this.stim.sentence_a, 
         "shifted_sentence": this.stim.shifted_sentence,
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
         "response": this.radio,
@@ -457,11 +457,11 @@ function make_slides(f) {
       this.stim = stim;
 
       // extract original and sentence with "but not all"
-      var nonshifted_sentence = stim.nonshifted_sentence;
+      var sentence_a = stim.sentence_a;
       var shifted_sentence = stim.shifted_sentence;
 
       // replace the placeholder in the HTML document with the relevant sentences for this trial
-      $("#trial-SentenceA4").html(nonshifted_sentence);
+      $("#trial-SentenceA4").html(sentence_a);
       $("#trial-SentenceB4").html(shifted_sentence);
       $(".norating_err").hide();
       $('.comment_err').hide();
@@ -486,7 +486,7 @@ function make_slides(f) {
     log_responses: function() {
       exp.data_trials.push({
         "id": this.stim.id,
-        "nonshifted_sentence": this.stim.nonshifted_sentence, 
+        "sentence_a": this.stim.sentence_a, 
         "shifted_sentence": this.stim.shifted_sentence,
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
         "response": this.radio,
@@ -558,11 +558,11 @@ function make_slides(f) {
       this.stim = stim;
 
       // extract original and sentence with "but not all"
-      var nonshifted_sentence = stim.nonshifted_sentence;
+      var sentence_a = stim.sentence_a;
       var shifted_sentence = stim.shifted_sentence;
 
       // replace the placeholder in the HTML document with the relevant sentences for this trial
-      $("#trial-SentenceA5").html(nonshifted_sentence);
+      $("#trial-SentenceA5").html(sentence_a);
       $("#trial-SentenceB5").html(shifted_sentence);
       $(".norating_err").hide();
       $('.comment_err').hide();
@@ -587,7 +587,7 @@ function make_slides(f) {
     log_responses: function() {
       exp.data_trials.push({
         "id": this.stim.id,
-        "nonshifted_sentence": this.stim.nonshifted_sentence, 
+        "sentence_a": this.stim.sentence_a, 
         "shifted_sentence": this.stim.shifted_sentence,
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
         "response": this.radio,
