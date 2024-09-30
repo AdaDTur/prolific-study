@@ -141,8 +141,8 @@ function make_slides(f) {
       this.stim = stim;
 
       // extract original and sentence with "but not all"
-      var sentence_a = stim.sentence_a;
-      var sentence_b = stim.sentence_b;
+      var nonshifted_sentence = stim.shifted_sentence;
+      var shifted_sentence = stim.nonshifted_sentence;
 
       //handle display of context 
       // if (exp.condition == "context") {
@@ -158,8 +158,8 @@ function make_slides(f) {
       // }
 
       // replace the placeholder in the HTML document with the relevant sentences for this trial
-      $("#trial-SentenceA1").html(sentence_a);
-      $("#trial-SentenceB1").html(sentence_b);
+      $("#trial-SentenceA1").html(shifted_sentence);
+      $("#trial-SentenceB1").html(nonshifted_sentence);
       $(".norating_err").hide();
       $('.comment_err').hide();
 
@@ -183,8 +183,8 @@ function make_slides(f) {
     log_responses: function() {
       exp.data_trials.push({
         "id": this.stim.id,
-        "sentence_a": this.stim.sentence_a, 
-        "sentence_b": this.stim.sentence_b,
+        "nonshifted_sentence": this.stim.shifted_sentence, 
+        "shifted_sentence": this.stim.nonshifted_sentence,
         "shift_a": this.stim.shift_a,
         "shift_b": this.stim.shift_b,
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
@@ -258,12 +258,12 @@ function make_slides(f) {
       this.stim = stim;
 
       // extract original and sentence with "but not all"
-      var sentence_a = stim.sentence_a;
-      var sentence_b = stim.sentence_b;
+      var nonshifted_sentence = stim.nonshifted_sentence;
+      var shifted_sentence = stim.shifted_sentence;
 
       // replace the placeholder in the HTML document with the relevant sentences for this trial
-      $("#trial-SentenceA2").html(sentence_a);
-      $("#trial-SentenceB2").html(sentence_b);
+      $("#trial-SentenceA2").html(nonshifted_sentence);
+      $("#trial-SentenceB2").html(shifted_sentence);
       $(".norating_err").hide();
       $('.comment_err').hide();
 
@@ -287,8 +287,8 @@ function make_slides(f) {
     log_responses: function() {
       exp.data_trials.push({
         "id": this.stim.id,
-        "sentence_a": this.stim.sentence_a, 
-        "sentence_b": this.stim.sentence_b,
+        "nonshifted_sentence": this.stim.nonshifted_sentence, 
+        "shifted_sentence": this.stim.shifted_sentence,
         "shift_a": this.stim.shift_a,
         "shift_b": this.stim.shift_b,
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
@@ -361,12 +361,12 @@ function make_slides(f) {
       this.stim = stim;
 
       // extract original and sentence with "but not all"
-      var sentence_a = stim.sentence_a;
-      var sentence_b = stim.sentence_b;
+      var nonshifted_sentence = stim.nonshifted_sentence;
+      var shifted_sentence = stim.shifted_sentence;
 
       // replace the placeholder in the HTML document with the relevant sentences for this trial
-      $("#trial-SentenceA3").html(sentence_a);
-      $("#trial-SentenceB3").html(sentence_b);
+      $("#trial-SentenceA3").html(nonshifted_sentence);
+      $("#trial-SentenceB3").html(shifted_sentence);
       $(".norating_err").hide();
       $('.comment_err').hide();
 
@@ -390,8 +390,8 @@ function make_slides(f) {
     log_responses: function() {
       exp.data_trials.push({
         "id": this.stim.id,
-        "sentence_a": this.stim.sentence_a, 
-        "sentence_b": this.stim.sentence_b,
+        "nonshifted_sentence": this.stim.nonshifted_sentence, 
+        "shifted_sentence": this.stim.shifted_sentence,
         "shift_a": this.stim.shift_a,
         "shift_b": this.stim.shift_b,
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
@@ -463,12 +463,12 @@ function make_slides(f) {
       this.stim = stim;
 
       // extract original and sentence with "but not all"
-      var sentence_a = stim.sentence_a;
-      var sentence_b = stim.sentence_b;
+      var nonshifted_sentence = stim.nonshifted_sentence;
+      var shifted_sentence = stim.shifted_sentence;
 
       // replace the placeholder in the HTML document with the relevant sentences for this trial
-      $("#trial-SentenceA4").html(sentence_a);
-      $("#trial-SentenceB4").html(sentence_b);
+      $("#trial-SentenceA4").html(nonshifted_sentence);
+      $("#trial-SentenceB4").html(shifted_sentence);
       $(".norating_err").hide();
       $('.comment_err').hide();
 
@@ -492,8 +492,8 @@ function make_slides(f) {
     log_responses: function() {
       exp.data_trials.push({
         "id": this.stim.id,
-        "sentence_a": this.stim.sentence_a, 
-        "sentence_b": this.stim.sentence_b,
+        "nonshifted_sentence": this.stim.nonshifted_sentence, 
+        "shifted_sentence": this.stim.shifted_sentence,
         "shift_a": this.stim.shift_a,
         "shift_b": this.stim.shift_b,
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
@@ -566,12 +566,12 @@ function make_slides(f) {
       this.stim = stim;
 
       // extract original and sentence with "but not all"
-      var sentence_a = stim.sentence_a;
-      var sentence_b = stim.sentence_b;
+      var nonshifted_sentence = stim.nonshifted_sentence;
+      var shifted_sentence = stim.shifted_sentence;
 
       // replace the placeholder in the HTML document with the relevant sentences for this trial
-      $("#trial-SentenceA5").html(sentence_a);
-      $("#trial-SentenceB5").html(sentence_b);
+      $("#trial-SentenceA5").html(nonshifted_sentence);
+      $("#trial-SentenceB5").html(shifted_sentence);
       $(".norating_err").hide();
       $('.comment_err').hide();
 
@@ -595,8 +595,8 @@ function make_slides(f) {
     log_responses: function() {
       exp.data_trials.push({
         "id": this.stim.id,
-        "sentence_a": this.stim.sentence_a, 
-        "sentence_b": this.stim.sentence_b,
+        "nonshifted_sentence": this.stim.nonshifted_sentence, 
+        "shifted_sentence": this.stim.shifted_sentence,
         "shift_a": this.stim.shift_a,
         "shift_b": this.stim.shift_b,
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
