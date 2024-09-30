@@ -158,8 +158,8 @@ function make_slides(f) {
       // }
 
       // replace the placeholder in the HTML document with the relevant sentences for this trial
-      $("#trial-SentenceA1").html(sentence_b);
-      $("#trial-SentenceB1").html(sentence_a);
+      $("#trial-SentenceA1").html(sentence_a);
+      $("#trial-SentenceB1").html(sentence_b);
       $(".norating_err").hide();
       $('.comment_err').hide();
 
@@ -183,8 +183,10 @@ function make_slides(f) {
     log_responses: function() {
       exp.data_trials.push({
         "id": this.stim.id,
-        "sentence_a": this.stim.sentence_b, 
-        "sentence_b": this.stim.sentence_a,
+        "sentence_a": this.stim.sentence_a, 
+        "sentence_b": this.stim.sentence_b,
+        "shift_a": this.stim.shift_a,
+        "shift_b": this.stim.shift_b,
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
         "response": this.radio,
         "comments": this.comments,
@@ -287,6 +289,8 @@ function make_slides(f) {
         "id": this.stim.id,
         "sentence_a": this.stim.sentence_a, 
         "sentence_b": this.stim.sentence_b,
+        "shift_a": this.stim.shift_a,
+        "shift_b": this.stim.shift_b,
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
         "response": this.radio,
         "comments": this.comments,
@@ -388,6 +392,8 @@ function make_slides(f) {
         "id": this.stim.id,
         "sentence_a": this.stim.sentence_a, 
         "sentence_b": this.stim.sentence_b,
+        "shift_a": this.stim.shift_a,
+        "shift_b": this.stim.shift_b,
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
         "response": this.radio,
         "comments": this.comments,
@@ -488,6 +494,8 @@ function make_slides(f) {
         "id": this.stim.id,
         "sentence_a": this.stim.sentence_a, 
         "sentence_b": this.stim.sentence_b,
+        "shift_a": this.stim.shift_a,
+        "shift_b": this.stim.shift_b,
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
         "response": this.radio,
         "comments": this.comments,
@@ -589,6 +597,8 @@ function make_slides(f) {
         "id": this.stim.id,
         "sentence_a": this.stim.sentence_a, 
         "sentence_b": this.stim.sentence_b,
+        "shift_a": this.stim.shift_a,
+        "shift_b": this.stim.shift_b,
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
         "response": this.radio,
         "comments": this.comments,
