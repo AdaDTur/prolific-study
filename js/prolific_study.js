@@ -141,8 +141,8 @@ function make_slides(f) {
       this.stim = stim;
 
       // extract original and sentence with "but not all"
-      var sentence_a = stim.sentence_a;
-      var sentence_b = stim.sentence_b;
+      var sentence_a = stim.sentence_b;
+      var sentence_b = stim.sentence_a;
 
       //handle display of context 
       // if (exp.condition == "context") {
@@ -361,8 +361,8 @@ function make_slides(f) {
       this.stim = stim;
 
       // extract original and sentence with "but not all"
-      var sentence_a = stim.sentence_a;
-      var sentence_b = stim.sentence_b;
+      var sentence_a = stim.sentence_b;
+      var sentence_b = stim.sentence_a;
 
       // replace the placeholder in the HTML document with the relevant sentences for this trial
       $("#trial-SentenceA3").html(sentence_a);
@@ -566,8 +566,8 @@ function make_slides(f) {
       this.stim = stim;
 
       // extract original and sentence with "but not all"
-      var sentence_a = stim.sentence_a;
-      var sentence_b = stim.sentence_b;
+      var sentence_a = stim.sentence_b;
+      var sentence_b = stim.sentence_a;
 
       // replace the placeholder in the HTML document with the relevant sentences for this trial
       $("#trial-SentenceA5").html(sentence_a);
