@@ -594,8 +594,8 @@ var all_stims =
     {
       "id": 33,
       "var": "hnps",
-      "unshifted_sentence": "Melissan enjoyed at her university fascinating courses for her graduate program.",
-      "shifted_sentence": "Melissan enjoyed fascinating courses for her graduate program at her university."
+      "unshifted_sentence": "Melissa enjoyed at her university fascinating courses for her graduate program.",
+      "shifted_sentence": "Melissa enjoyed fascinating courses for her graduate program at her university."
     },
     {
       "id": 103,
@@ -992,8 +992,8 @@ var all_stims =
     {
       "id": 115,
       "var": "hnps",
-      "unshifted_sentence": "Melissan enjoyed at the college courses under the famous professor.",
-      "shifted_sentence": "Melissan enjoyed courses under the famous professor at the college."
+      "unshifted_sentence": "Melissa enjoyed at the college courses under the famous professor.",
+      "shifted_sentence": "Melissa enjoyed courses under the famous professor at the college."
     },
     {
       "id": 171,
@@ -1102,8 +1102,8 @@ var all_stims =
     {
       "id": 47,
       "var": "hnps",
-      "unshifted_sentence": "Melissan enjoyed during the day strenuous courses on astronomy under the famous professor from NASA.",
-      "shifted_sentence": "Melissan enjoyed strenuous courses on astronomy under the famous professor from NASA during the day."
+      "unshifted_sentence": "Melissa enjoyed during the day strenuous courses on astronomy under the famous professor from NASA.",
+      "shifted_sentence": "Melissa enjoyed strenuous courses on astronomy under the famous professor from NASA during the day."
     },
     {
       "id": 422,
@@ -1442,8 +1442,8 @@ var all_stims =
     {
       "id": 53,
       "var": "hnps",
-      "unshifted_sentence": "Melissan enjoyed at her university strenuous courses for her graduate program on astronomy.",
-      "shifted_sentence": "Melissan enjoyed strenuous courses for her graduate program on astronomy at her university."
+      "unshifted_sentence": "Melissa enjoyed at her university strenuous courses for her graduate program on astronomy.",
+      "shifted_sentence": "Melissa enjoyed strenuous courses for her graduate program on astronomy at her university."
     },
     {
       "id": 491,
@@ -1576,8 +1576,8 @@ var all_stims =
     {
       "id": 106,
       "var": "hnps",
-      "unshifted_sentence": "Melissan enjoyed at her university fascinating courses for her graduate program from NASA.",
-      "shifted_sentence": "Melissan enjoyed fascinating courses for her graduate program from NASA at her university."
+      "unshifted_sentence": "Melissa enjoyed at her university fascinating courses for her graduate program from NASA.",
+      "shifted_sentence": "Melissa enjoyed fascinating courses for her graduate program from NASA at her university."
     },
     {
       "id": 73,
@@ -2010,8 +2010,8 @@ var all_stims =
     {
       "id": 26,
       "var": "hnps",
-      "unshifted_sentence": "Melissan enjoyed at the college strenuous courses on astronomy under the famous professor from NASA.",
-      "shifted_sentence": "Melissan enjoyed strenuous courses on astronomy under the famous professor from NASA at the college."
+      "unshifted_sentence": "Melissa enjoyed at the college strenuous courses on astronomy under the famous professor from NASA.",
+      "shifted_sentence": "Melissa enjoyed strenuous courses on astronomy under the famous professor from NASA at the college."
     },
     {
       "id": 490,
@@ -2144,8 +2144,8 @@ var all_stims =
     {
       "id": 20,
       "var": "hnps",
-      "unshifted_sentence": "Melissan enjoyed at her university fascinating courses on astronomy under the famous professor.",
-      "shifted_sentence": "Melissan enjoyed fascinating courses on astronomy under the famous professor at her university."
+      "unshifted_sentence": "Melissa enjoyed at her university fascinating courses on astronomy under the famous professor.",
+      "shifted_sentence": "Melissa enjoyed fascinating courses on astronomy under the famous professor at her university."
     },
     {
       "id": 303,
@@ -2924,8 +2924,8 @@ var all_stims =
     {
       "id": 110,
       "var": "hnps",
-      "unshifted_sentence": "Melissan enjoyed during the day strenuous courses for her graduate program on astronomy under the famous professor.",
-      "shifted_sentence": "Melissan enjoyed strenuous courses for her graduate program on astronomy under the famous professor during the day."
+      "unshifted_sentence": "Melissa enjoyed during the day strenuous courses for her graduate program on astronomy under the famous professor.",
+      "shifted_sentence": "Melissa enjoyed strenuous courses for her graduate program on astronomy under the famous professor during the day."
     }
   ],
   [
@@ -3022,8 +3022,8 @@ var all_stims =
     {
       "id": 36,
       "var": "hnps",
-      "unshifted_sentence": "Melissan enjoyed during the day strenuous courses for her graduate program on astronomy under the famous professor from NASA.",
-      "shifted_sentence": "Melissan enjoyed strenuous courses for her graduate program on astronomy under the famous professor from NASA during the day."
+      "unshifted_sentence": "Melissa enjoyed during the day strenuous courses for her graduate program on astronomy under the famous professor from NASA.",
+      "shifted_sentence": "Melissa enjoyed strenuous courses for her graduate program on astronomy under the famous professor from NASA during the day."
     },
     {
       "id": 27,
