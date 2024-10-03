@@ -292,8 +292,8 @@ function make_slides(f) {
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
         "response": this.radio,
         "comments": this.comments,
-        "shift_a": 0,
-        "shift_b": 1
+        "shift_a": 1,
+        "shift_b": 0
       });
     },
   });
@@ -497,8 +497,8 @@ function make_slides(f) {
         "slide_number_in_experiment": exp.phase, //exp.phase is a built-in trial number tracker
         "response": this.radio,
         "comments": this.comments,
-        "shift_a": 0,
-        "shift_b": 1
+        "shift_a": 1,
+        "shift_b": 0
       });
     },
   });
