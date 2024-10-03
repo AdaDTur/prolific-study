@@ -262,8 +262,8 @@ function make_slides(f) {
       var shifted_sentence = stim.shifted_sentence;
 
       // replace the placeholder in the HTML document with the relevant sentences for this trial
-      $("#trial-SentenceA2").html(unshifted_sentence);
-      $("#trial-SentenceB2").html(shifted_sentence);
+      $("#trial-SentenceA2").html(shifted_sentence);
+      $("#trial-SentenceB2").html(unshifted_sentence);
       $(".norating_err").hide();
       $('.comment_err').hide();
 
@@ -467,8 +467,8 @@ function make_slides(f) {
       var shifted_sentence = stim.shifted_sentence;
 
       // replace the placeholder in the HTML document with the relevant sentences for this trial
-      $("#trial-SentenceA4").html(unshifted_sentence);
-      $("#trial-SentenceB4").html(shifted_sentence);
+      $("#trial-SentenceA4").html(shifted_sentence);
+      $("#trial-SentenceB4").html(unshifted_sentence);
       $(".norating_err").hide();
       $('.comment_err').hide();
 
